@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Dosis:700);
-@import url(https://fonts.googleapis.com/css?family=Roboto:400);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 input:focus,
 textarea:focus,
 button:focus {
@@ -18,7 +17,7 @@ a {
 
 .name {
   margin-top: 4px;
-  font-family: Dosis,Helvetica,Roboto,sans-serif;
+  font-family: Helvetica,Roboto,Arial,sans-serif;
   color: #333;
   font-size: 24px;
   font-weight: 700;
