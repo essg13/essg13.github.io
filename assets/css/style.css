@@ -173,11 +173,7 @@ a {
   color: #FF6E0F; }
 
 body {
-  background-image: url("../../assets/img/team.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center 52px;
+  background-color: #f7e7ce;
   margin: 0px; }
 
 .header-home2 {
@@ -261,10 +257,15 @@ body {
   background-size: 100% 2px; }
 
 .blogcontainer {
+  transform: translate(-50%,-50%);
+  top: 40%;
+  left: 50%;
   padding-bottom: 30px;
   margin-bottom: 100px !important;
-  margin-top: 100px !important;
-  max-width: 840px;
+  margin-top: 20vh;
+  position: absolute;
+  width: 360px;
+  height: 360px;
   border-radius: 10px;
   background: #fff;
   margin: auto; }
@@ -435,8 +436,8 @@ body {
   margin: 4px;
   border-radius: 32px;
   color: #333;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
@@ -502,8 +503,7 @@ body {
 /* MOBILE RULES */
 @media only screen and (max-width: 768px) {
   body {
-    background-image: url("../../assets/img/team-halfres.jpg");
-    background-attachment: scroll; }
+  }
   .page {
     background: #fff;
     margin-top: 140px; }
@@ -518,10 +518,9 @@ body {
     margin: auto;
   }
   .blogcontainer {
+    margin-top: 30px;
+    background-color: transparent;
     border-radius: 0px;
-    top: 25%;
-    border: none;
-    margin-bottom: 0px !important;
  }
   .blogtitle {
     padding-top: 60px;
