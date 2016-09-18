@@ -172,7 +172,7 @@ a {
   color: #FF6E0F; }
 
 body {
-  background-color: #f7e7ce;
+  background-color: #E3E7F3;
   margin: 0px; }
 
 .header-home2 {
@@ -298,9 +298,9 @@ body {
 
 .card img:hover,
 .card img:active {
-  -webkit-box-shadow: 0px 0px 0px 6px #17A9AD;
-  -moz-box-shadow: 0px 0px 0px 6px #17A9AD;
-  box-shadow: 0px 0px 0px 6px #17A9AD;
+  -webkit-box-shadow: 0px 0px 0px 6px #4660B9;
+  -moz-box-shadow: 0px 0px 0px 6px #4660B9;
+  box-shadow: 0px 0px 0px 6px #4660B9;
   -webkit-transform: scale(1.05);
   transform: scale(1.05); }
 
@@ -460,8 +460,8 @@ body {
 
 .hvr-grow-shadow:hover,
 .hvr-grow-shadow:active {
-  color: #17A9AD;
-  box-shadow: 0px 3px 34px -4px #17A9AD;
+  color: #4660B9;
+  box-shadow: 0px 3px 34px -4px #4660B9;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   outline: none; }
@@ -469,7 +469,7 @@ body {
 .heart {
   display: inline;
   font-size: 14px;
-  color: #17A9AD; }
+  color: #4660B9; }
 
 .cont {
   display: inline;
