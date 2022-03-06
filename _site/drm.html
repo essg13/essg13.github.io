@@ -1,0 +1,1019 @@
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan, Asim K T
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Digital Garden" property="og:site_name" />
+    <meta
+        content="A Jekyll theme for Obsidian users to build digital garden"
+        property="og:description">
+      <meta content="http://localhost:4000/about/" property="article:author">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet"><meta content="Design Research Methodologies" property="og:title">
+      <meta content="article" property="og:type">
+      <meta content="http://localhost:4000/drm" property="og:url"><title>Gyan Lakhwani</title>
+      <link rel="canonical" href="http://localhost:4000/drm" />
+      <link rel="apple-touch-icon" href="/assets/img/profile.png">
+      <link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="16x16" />
+      <link href="/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/main.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" />
+      <!--[if IE]>
+        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+      <![endif]-->
+      <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+      <link rel="alternate" type="application/rss+xml" href="http://localhost:4000/feed.xml">
+    </head>
+    <body><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="../index.html">
+            <svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8008 11.0919C29.3912 -1.1857 52.5295 -3.86015 67.1531 9.72177C72.8779 15.0388 75.1649 21.7219 75.3372 27.8677C75.5079 33.9547 73.6068 39.6661 70.7449 43.1234C65.0375 50.0186 55.6542 52.1958 47.7817 52.4359C46.0372 57.5928 43.203 62.2357 38.2212 64.8853C32.6638 67.841 27.3363 66.2512 24.9157 62.709C23.7165 60.9541 23.2728 58.733 24.011 56.5686C24.7486 54.4057 26.5693 52.5703 29.3697 51.3388C34.1619 49.2313 39.7977 49.0095 45.1739 48.9663C46.5194 43.9576 47.3458 37.5214 47.9737 32.2494C47.8626 32.2809 47.7147 32.3357 47.5243 32.4299C46.5613 32.9064 45.3122 33.9736 43.7346 35.4974C43.2222 35.9923 42.6757 36.5348 42.1076 37.0987C41.0299 38.1683 39.8744 39.3153 38.7255 40.3623C36.9538 41.9767 35.0059 43.5392 32.9816 44.5098C30.3336 45.7796 27.0061 45.8055 24.3801 44.345C21.6228 42.8114 19.8853 39.781 20.3166 35.5517C21.3918 25.009 30.5217 17.4814 39.9011 15.6693C44.6376 14.7542 49.6044 15.2525 53.8027 17.6732C58.0355 20.1138 61.3051 24.405 62.7793 30.7093C62.9993 31.6504 62.4148 32.5917 61.4737 32.8118C60.5326 33.0318 59.5913 32.4473 59.3712 31.5062C58.0896 26.0256 55.3486 22.6046 52.0545 20.7053C48.7259 18.7861 44.6495 18.3167 40.565 19.1058C32.3025 20.7021 24.6793 27.2702 23.7986 35.9068C23.4953 38.8802 24.6614 40.4965 26.0813 41.2862C27.6326 42.149 29.756 42.175 31.4683 41.3539C33.0211 40.6093 34.6647 39.3275 36.368 37.7753C37.4696 36.7715 38.5171 35.7311 39.555 34.7001C40.1381 34.121 40.7181 33.5449 41.3031 32.9799C42.8363 31.499 44.4505 30.0458 45.9721 29.2929C46.751 28.9075 47.6867 28.6115 48.682 28.7378C49.7514 28.8736 50.6156 29.4602 51.2489 30.3168C51.5136 30.6748 51.6318 31.1202 51.5796 31.5623C50.9824 36.6209 50.1769 43.3706 48.8079 48.8892C55.9616 48.4933 63.5314 46.3491 68.0488 40.8917C70.2743 38.2031 71.99 33.3669 71.8386 27.9657C71.6888 22.6233 69.7147 16.8776 64.7712 12.2863C51.7479 0.190604 30.6842 2.36296 18.1471 13.6891C11.9952 19.2467 7.75466 28.3715 6.74672 38.101C5.74071 47.8117 7.97737 57.8869 14.4577 65.4102C20.8788 72.8647 32.8654 77.1043 44.6021 76.1607C56.2569 75.2237 67.3079 69.213 72.1864 56.5886C72.5348 55.687 73.548 55.2386 74.4495 55.587C75.3511 55.9354 75.7995 56.9486 75.4511 57.8502C69.9806 72.0064 57.5521 78.6308 44.8826 79.6494C32.2951 80.6614 19.1126 76.1772 11.8059 67.6944C4.55843 59.2806 2.18427 48.1757 3.26535 37.7403C4.34448 27.3237 8.88895 17.3361 15.8008 11.0919ZM44.0471 52.4804C39.0957 52.5559 34.5643 52.8779 30.7786 54.5426C28.6273 55.4887 27.667 56.6913 27.3236 57.6983C26.9808 58.7037 27.1561 59.7842 27.8054 60.7342C29.0814 62.6015 32.3683 64.0339 36.5777 61.7952C40.1402 59.9004 42.4608 56.6288 44.0471 52.4804Z" fill="var(--text-main)"/>
+            </svg>
+            <h4>Gyan Lakhwani</h4>
+          </a>
+          <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
+            <div class="buttons">
+              <a class="button is-text">
+                <span class="icon is-small">
+                  <img src="../assets/img/sun.svg" id="theme-toggle-img--mobile">
+                </span>
+              </a>
+            </div>
+          </div>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="../notes"  class="navbar-item">
+              Writing
+            </a>
+          </div>
+          <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-text">
+                  <span class="icon is-small">
+                    <img src="../assets/img/sun.svg" id="theme-toggle-img">
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script src="/assets/js/Hamburger.js"></script>
+      <section class="section">
+        <div class="columns is-centered">
+          <!--- CASE 1 : Homepage--><!---CASE 2 : Notes & Blog Page-->
+          <div class="column is-three-fifths">
+            <main>
+              <div class="note-page-section">
+                <div class="buttons for-back-home"><a class="button is-text button__page-back" onclick="window.location.assign('/');"><span class="icon is-small">
+                      <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.0309 0.468998C11.1007 0.538667 11.1561 0.62143 11.1939 0.712548C11.2318 0.803665 11.2512 0.901347 11.2512 0.999998C11.2512 1.09865 11.2318 1.19633 11.1939 1.28745C11.1561 1.37857 11.1007 1.46133 11.0309 1.531L2.56038 10L11.0309 18.469C11.1717 18.6098 11.2508 18.8008 11.2508 19C11.2508 19.1992 11.1717 19.3902 11.0309 19.531C10.89 19.6718 10.699 19.7509 10.4999 19.7509C10.3007 19.7509 10.1097 19.6718 9.96887 19.531L0.968875 10.531C0.899031 10.4613 0.843616 10.3786 0.805806 10.2874C0.767997 10.1963 0.748535 10.0986 0.748535 10C0.748535 9.90135 0.767997 9.80367 0.805806 9.71255C0.843616 9.62143 0.899031 9.53867 0.968875 9.469L9.96887 0.468998C10.0385 0.399153 10.1213 0.343739 10.2124 0.305929C10.3035 0.26812 10.4012 0.248657 10.4999 0.248657C10.5985 0.248657 10.6962 0.26812 10.7873 0.305929C10.8784 0.343739 10.9612 0.399153 11.0309 0.468998Z"
+                                        fill="var(--text-main)" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <h1 class="note-title">Design Research Methodologies</h1>
+                <h2 class="note-subtitle">Running notes from the Design Research Methodologies course at IDC School of Design, IIT Bombay.</h2>
+                <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+                <div class="content">
+                  <h2 id="friday-2-august-2019">Friday, 2 August 2019</h2>
+                  <h3 id="girish-dalvi">Girish Dalvi</h3>
+                  <p>Source Grid</p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Author</th>
+                        <th>Definition</th>
+                        <th>Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Athavankar (1990)</td>
+                        <td>Design is…</td>
+                        <td>First Definition</td>
+                      </tr>
+                      <tr>
+                        <td>Balram (1995)</td>
+                        <td>Design is…</td>
+                        <td>Inspired by Ulm</td>
+                      </tr>
+                      <tr>
+                        <td> </td>
+                        <td>Design is…</td>
+                        <td>Agrees with Athavankar, adds…</td>
+                      </tr>
+                      <tr>
+                        <td> </td>
+                        <td>Design is…</td>
+                        <td>Disagrees with …</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h4 id="referencing-styles">Referencing Styles</h4>
+                  <ul>
+                    <li>
+                      <p>LNCS</p>
+                    </li>
+                    <li>
+                      <p>APA</p>
+                    </li>
+                  </ul>
+                  <h4 id="manual-styles">Manual Styles</h4>
+                  <ul>
+                    <li>
+                      <p>Chicago Manual of Style</p>
+                    </li>
+                    <li>
+                      <p>Oxford Manual of Style</p>
+                    </li>
+                  </ul>
+                  <h4 id="reporting-the-work-of-others">Reporting the work of others</h4>
+                  <p>Paraphrasing (Writing another person's idea in your own words)</p>
+                  <p>Summary ()</p>
+                  <p>Quotations (Avoid too many)</p>
+                  <p>Synthesis (Taking multiple authors, paraphrase them, link their work in like one or two lines. If you have 10-15 authors but quoting each will make the text too long)</p>
+                  <p>Introductory phrases</p>
+                  <p>Reporting verbs</p>
+                  <h4 id="integral">Integral </h4>
+                  <p>According to Dalvi (2010) …</p>
+                  <h4 id="non-integral">Non-integral</h4>
+                  <p>… Dalvi</p>
+                  <h4 id="indicating-agreement">Indicating agreement</h4>
+                  <p>Joshi (2003) points out that a far more effective approach is…</p>
+                  <h4 id="foreshadowing-for-disagreement">Foreshadowing for disagreement</h4>
+                  <p>Joshi (2003) claims that a far more effective approach is…</p>
+                  <h4 id="direct-quotation-must-be-in-quotes-author-must-be-at-beginning-or-end">Direct quotation must be in quotes, author must be at beginning or end</h4>
+                  <p>"Hit me baby one more time" (Spears, 1998)</p>
+                  <h4 id="long-quotations-mostly-used-for-a-narrative">Long quotations (Mostly used for a narrative)</h4>
+                  <p>According to Lakhwani,</p>
+                  <p>"When I was a child, I was … and that's the story of how I got lost in the mall" (Lakhwani, 2019)</p>
+                  <h4 id="patching">Patching</h4>
+                  <p>Only slightly changing the wording - using a thesaurus and swapping words. Even if you provide citation/reference, patching is considered a form of plagiarism.</p>
+                  <h4 id="side-stepping-to-show-your-awareness-of-the-complexity-of-the-issue">Side-stepping (To show your awareness of the complexity of the issue) </h4>
+                  <ul>
+                    <li>
+                      <p>Acknowledge a problem exists but mention that it is not your focus.</p>
+                    </li>
+                    <li>
+                      <p>Give references to the work done by other people in the side-stepped area for people to pivot towards.</p>
+                    </li>
+                  </ul>
+                  <p>"These issues are not the focus of the study, readers interested in postcolonial studies can refer, to mention a few, the works of (Alvares 1991), (Bhabha 1994) and the writings of Subaltern studies group"</p>
+                  <h4 id="organising-your-review">Organising your review</h4>
+                  <ul>
+                    <li>
+                      <p>Topical</p>
+                    </li>
+                    <li>
+                      <p>Chronological</p>
+                    </li>
+                    <li>
+                      <p>Problem-cause-solution</p>
+                    </li>
+                    <li>
+                      <p>General-to-specific / specific-to-general</p>
+                    </li>
+                    <li>
+                      <p>Known-to-unknown</p>
+                    </li>
+                    <li>
+                      <p>Comparison-and-contrast</p>
+                    </li>
+                  </ul>
+                  <h4 id="suggested-method-for-organising-your-review-general-to-specific">Suggested method for organising your review (general-to-specific)</h4>
+                  <ul>
+                    <li>
+                      <p>Broad topics</p>
+                    </li>
+                    <li>
+                      <p>Subtopics</p>
+                    </li>
+                    <li>
+                      <p>Studies like yours</p>
+                    </li>
+                  </ul>
+                  <p>Hedging (#humble)</p>
+                  <p>Hypothesis =/= Opinion =/= Facts</p>
+                  <p>Distinguish between absolutes (100% certain) and probabilities (&lt;100% certain)</p>
+                  <p>Provide traceable evidence and justification for any claims you make or any opinions you have formed as a result of your research.</p>
+                  <h4 id="post-hedge">Post hedge</h4>
+                  <p>With the evidence we have, in the context of …</p>
+                  <p>Weasel words: Seems like, probably, perhaps, it appears<br />
+                    These sort of words are frowned upon in other types of writing but in academic writing you're protecting yourself against making outlandish claims. You also sound humbler.</p>
+                  <h3 id="assignment-number-1a">Assignment Number 1a</h3>
+                  <p>Due by next GD course - 21 August?</p>
+                  <p>Prepare a plan for the Literature Review of your Project/Research</p>
+                  <p>What will I cover?</p>
+                  <p>What will I not cover?</p>
+                  <p>Strategy for finding resources?</p>
+                  <p>What will my conclusion be?</p>
+                  <h3 id="assignment-number-1b">Assignment Number 1b</h3>
+                  <p>Due at end of semester</p>
+                  <p>Execute the plan for Literature Review</p>
+                  <p>Supplementary Reading</p>
+                  <ol>
+                    <li>
+                      <p>Hypotheses, Laws and Theories: A user's guide<br />
+                        Stephen Van Evera</p>
+                    </li>
+                    <li>
+                      <p>The literature review: it's role within research<br />
+                        Booth, Sutton et al</p>
+                    </li>
+                    <li>
+                      <p>How to Read a Paper<br />
+                        S. Keshav</p>
+                    </li>
+                  </ol>
+                  <h2 id="wednesday-7-august-2019">Wednesday, 7 August 2019</h2>
+                  <blockquote>
+                    <p>"What is research? Nobody knows." - AJ, 2019</p>
+                  </blockquote>
+                  <p>Creation of new knowledge</p>
+                  <p>Reliable, valid and reproducible</p>
+                  <p>Contextualising and referencing</p>
+                  <ul>
+                    <li>
+                      <p>What was known, what is new, how is it different?</p>
+                    </li>
+                    <li>
+                      <p>Incremental - builds on previous work.</p>
+                    </li>
+                    <li>
+                      <p>'Good' ideas are refined + advanced, 'bad' ideas are discarded</p>
+                    </li>
+                  </ul>
+                  <p>Articulation</p>
+                  <ul>
+                    <li>Writing papers</li>
+                  </ul>
+                  <h2 id="friday-9-august-2019">Friday, 9 August 2019</h2>
+                  <h3 id="correlational-research">Correlational Research</h3>
+                  <p>Correlational is not necessary coincidental.</p>
+                  <h4 id="confound">Confound</h4>
+                  <p>this is the third variable which muddles your data.</p>
+                  <p>Causality -</p>
+                  <p>Experimental Research</p>
+                  <p>A 'controlled' experiment in a 'lab' setting</p>
+                  <p>2 variables - manipulated variable and response variable.</p>
+                  <p>AKA Dependent variable and independent variable.</p>
+                  <p>Experimental research must have at least 1 IV.<br />
+                    Number of "effects" increases rapidly with number of IVs, try to keep them limited in an experiment 2 to 3? Eg. Drug trials 2 or more start interacting with each other also.</p>
+                  <h4 id="independent-variable-iv">Independent Variable (IV)</h4>
+                  <p>Independent of user behaviour. It is manipulated in an experiment to elicit a change.</p>
+                  <p>Eg. change in human response while using a design</p>
+                  <blockquote>
+                    <p>"Look, I'm creating a theory." - AJ 2019</p>
+                  </blockquote>
+                  <ul>
+                    <li>
+                      <p>Must have at least 2 levels/values/settings</p>
+                    </li>
+                    <li>
+                      <p>Name both the factor (IV) and levels (test conditions)</p>
+                    </li>
+                    <li>
+                      <p>Human attributes (age, gender, height, etc.) could be IV but cannot be "manipulated"</p>
+                    </li>
+                    <li>
+                      <p>There may be confounding variables - a variable that affects IV &amp; DV both, causing spurious association. They are often hidden, you need to guess at them.</p>
+                    </li>
+                    <li>
+                      <p>Usually correlational studies</p>
+                    </li>
+                  </ul>
+                  <h4 id="dependent-variable">Dependent Variable</h4>
+                  <ul>
+                    <li>
+                      <p>Use anything that is measurable and reproducible</p>
+                    </li>
+                    <li>
+                      <p>You should be able to collect the data</p>
+                    </li>
+                  </ul>
+                  <h4 id="control-variable">Control Variable</h4>
+                  <p>Circumstance (not under investigation) that is kept constant while testing effect of IV.</p>
+                  <h4 id="random-variable">Random Variable</h4>
+                  <p>Circumstance (not under investigation) that is allowed to vary randomly while testing effect of IV.</p>
+                  <h4 id="confounding-variables">Confounding Variables</h4>
+                  <p>Circumstance apart from DVs under investigation that has an effect on IV.</p>
+                  <h4 id="operational-values">Operational values</h4>
+                  <p>When we're doing research we need to operationalize values - eg. trying to study technology adoption we might use number of devices owned, time taken to learn a technology (whatsapp, net banking)</p>
+                  <h4 id="research-questions">Research Questions</h4>
+                  <p>Is there a higher proportion of women in the profession of design as opposed to engineering?</p>
+                  <h4 id="hypothesis">Hypothesis</h4>
+                  <p>There is no difference in the proportion of women in the professions of engineering and design.</p>
+                  <h3 id="research-design">Research Design</h3>
+                  <p>Tension between external v/s internal validity</p>
+                  <p>If you control some of the random variables, variablity comes down.</p>
+                  <p>Some degree of randomness allows for better external validity.</p>
+                  <h4 id="between-subjects">Between Subjects</h4>
+                  <p>Each participant is tested on one condition only.</p>
+                  <p>More participants, but shorter study each.</p>
+                  <p>Variation in skills of participants can affect the study, needs balancing variables across test conditions.</p>
+                  <h4 id="within-subjects">Within Subjects</h4>
+                  <p>Each participant is tested on each condition. AKA repeated measures.</p>
+                  <p>Fewer participants, but longer study each.</p>
+                  <p>Less variation because of skills of participants, balancing not needed.</p>
+                  <p>Order effects (eg. learning, practice, fatigue) are possible - counterbalancing reqd.</p>
+                  <h4 id="asymmetric-learning-effects">Asymmetric learning effects</h4>
+                  <p>Eg. Keyboard A teaches people how to use keyboard B and vice versa.</p>
+                  <p>Use a training session to fix asymmetric learning effects.</p>
+                  <h4 id="order-effects---counterbalancing-if-possible-randomize-if-not">Order effects - Counterbalancing if possible, randomize if not. </h4>
+                  <ul>
+                    <li>
+                      <p>Learning</p>
+                    </li>
+                    <li>
+                      <p>Practice</p>
+                    </li>
+                    <li>
+                      <p>Fatigue</p>
+                    </li>
+                  </ul>
+                  <p>Balanced latin square when all P&amp;C not possible</p>
+                  <h2 id="wednesday-14-august-2019">Wednesday, 14 August 2019</h2>
+                  <blockquote>
+                    <p>"Have fun with the data" - AJ 2019</p>
+                  </blockquote>
+                  <p>Tapping Experiment</p>
+                  <p>Design of experiment</p>
+                  <ul>
+                    <li>
+                      <p>PC v/s Android - between subjects</p>
+                    </li>
+                    <li>
+                      <p>With and without feedback - within subjects, counter balanced</p>
+                    </li>
+                    <li>
+                      <p>Mixed design (since it used multiple things)</p>
+                    </li>
+                  </ul>
+                  <p>The sample population is all design students who are heavy users of technology.</p>
+                  <p>Homework for today</p>
+                  <h2 id="friday-16-august-2019">Friday, 16 August 2019</h2>
+                  <h3 id="null-hypothesis">Null hypothesis</h3>
+                  <p>Null Hypothesis</p>
+                  <p>The hypothesis that there is no significant difference between specified populations, any observed difference being due to sampling or experimental error.</p>
+                  <h4 id="what-would-be-the-purpose-of-doing-the-phonebook-experiment">What would be the purpose of doing the phonebook experiment?</h4>
+                  <ul>
+                    <li>Gender bias, argue for more diverse hiring</li>
+                  </ul>
+                  <h4 id="dal-factory-tur-dal">Dal factory (tur dal)</h4>
+                  <p>Dicot seed with outer shell, some oil. "Phatka" machine - not very sophisticated.</p>
+                  <h4 id="sortex-machine">Sortex machine</h4>
+                  <p>Uses optical camera and sorts 16 tons of dal a day.</p>
+                  <p>Good dal 70-80%</p>
+                  <p>Broken pieces to make powder</p>
+                  <p>Unbroken put back in the machine</p>
+                  <h2 id="wednesday-21-august-2019">Wednesday, 21 August 2019</h2>
+                  <h3 id="variables-according-to-levels-of-measurement">Variables according to levels of measurement</h3>
+                  <h4 id="categorical-variable">Categorical variable</h4>
+                  <p>Categories/names of things</p>
+                  <h4 id="nominal-variable">Nominal variable</h4>
+                  <p>2 or more categories with no intrinsic order</p>
+                  <h4 id="binomialdichotomous-variable">Binomial/Dichotomous variable</h4>
+                  <p>There are some special tests we can use, sometimes coded as 0/1</p>
+                  <ul>
+                    <li>
+                      <p>Do you own smartphone? (yes/no)</p>
+                    </li>
+                    <li>
+                      <p>Success (successful/failed)</p>
+                    </li>
+                  </ul>
+                  <h4 id="ordinal-variable">Ordinal variable</h4>
+                  <ul>
+                    <li>
+                      <p>How do you feel about govt's performance? (approve, on the fence, disapprove)</p>
+                    </li>
+                    <li>
+                      <p>Ranking is special case of Ordinal</p>
+                    </li>
+                    <li>
+                      <p>Letter grades in IITB - they start as numerical, but you want consistency in measurement across subjects, and teaching methods and evaluation methods vary.</p>
+                    </li>
+                  </ul>
+                  <p>Continuous variable</p>
+                  <p>Semantic differential scale</p>
+                  <p>Use bipolar adjectives to measure the psychological meaning of an attitude object.</p>
+                  <p>Visual continuous scale</p>
+                  <h4 id="interval-scale">Interval scale</h4>
+                  <ul>
+                    <li>
+                      <p>Measured along continuum</p>
+                    </li>
+                    <li>
+                      <p>Interval between 30°C and 40°C is same as 40°C and 50°C.</p>
+                    </li>
+                    <li>
+                      <p>0 is arbitrary value at which water freezes, not lack of temperature</p>
+                    </li>
+                    <li>
+                      <p>Ratio is not meaningful - 10°C is not double of 5°C.</p>
+                    </li>
+                  </ul>
+                  <h4 id="ratio-scale">Ratio scale</h4>
+                  <ul>
+                    <li>
+                      <p>10m is twice of 5m</p>
+                    </li>
+                    <li>
+                      <p>0 is absolute lack of something</p>
+                    </li>
+                    <li>
+                      <p>All tests for interval can be used for ratio but not other way around.</p>
+                    </li>
+                  </ul>
+                  <p>Normal distribution</p>
+                  <p>Bell curve</p>
+                  <p>P-value</p>
+                  <p>Chance that the result is by chance, given that null hypothesis is true.</p>
+                  <blockquote>
+                    <p>"There are only 2 things in the world - samples and populations." - AJ 2019</p>
+                  </blockquote>
+                  <h2 id="friday-23-august-2019">Friday, 23 August 2019</h2>
+                  <h3 id="girish-dalvi-1">Girish Dalvi</h3>
+                  <p>Research paper</p>
+                  <ul>
+                    <li>
+                      <p>Thesis/claim/data</p>
+                    </li>
+                    <li>
+                      <p>Method of collecting data</p>
+                    </li>
+                    <li>
+                      <p>Method of analysis</p>
+                    </li>
+                    <li>
+                      <p>Discussion<br />
+                        What are reasons for getting results we are getting? What other areas are there for exploration?</p>
+                    </li>
+                  </ul>
+                  <p>Lit Review content</p>
+                  <ul>
+                    <li>Purpose of Lit rev</li>
+                  </ul>
+                  <ol>
+                    <li>
+                      <p>How will you use the material you describe? Chekhov's gun.</p>
+                    </li>
+                    <li>
+                      <p>Prove demand for research/product</p>
+                    </li>
+                    <li>
+                      <p>Prove impact for research/product</p>
+                    </li>
+                    <li>
+                      <p>Document/survey and identify gaps</p>
+                    </li>
+                    <li>
+                      <p>Identify similiar/existing research/product</p>
+                    </li>
+                    <li>
+                      <p>Analyse them, use theory/good features</p>
+                    </li>
+                    <li>
+                      <p>Avoid disadvantages of existing products</p>
+                    </li>
+                    <li>
+                      <p>Other uses</p>
+                    </li>
+                  </ol>
+                  <ul>
+                    <li>
+                      <p>Organisation of Lit rev</p>
+                    </li>
+                    <li>
+                      <p>Sources<br />
+                        dssd</p>
+                    </li>
+                    <li>
+                      <p>Desired conclusion of Lit rev</p>
+                    </li>
+                  </ul>
+                  <p>What is a belief system?</p>
+                  <blockquote>
+                    <p>"Research is a belief system." - Girish Dalvi 2019</p>
+                  </blockquote>
+                  <ul>
+                    <li>
+                      <p>Nature is orderly and regular system</p>
+                    </li>
+                    <li>
+                      <p>We can know/understand nature (human exceptionalism)</p>
+                    </li>
+                    <li>
+                      <p>Knowledge is better than ignorance</p>
+                    </li>
+                    <li>
+                      <p>All natural phenomena have natural causes</p>
+                    </li>
+                    <li>
+                      <p>Nothing is self-evident, but it must be verified or falsified</p>
+                    </li>
+                    <li>
+                      <p>Knowledge is derived from observation of nature</p>
+                    </li>
+                  </ul>
+                  <p>Use of research</p>
+                  <p>Establish facts</p>
+                  <p>To test (and establish) 'causal' explanations for established facts</p>
+                  <p>Epistemology</p>
+                  <p>Rationalist</p>
+                  <p>Reasoning creates knowledge</p>
+                  <p>Empiricism</p>
+                  <p>Obtained through senses</p>
+                  <p>Types of explanation</p>
+                  <p>Idiographic</p>
+                  <p>Seeks to explain particular situation<br />
+                    → Limited to single case</p>
+                  <p>Nomothetic</p>
+                  <p>Seeks to explain a class of situations</p>
+                  <p>→ Generalizability</p>
+                  <p>Research strategies</p>
+                  <p>Inductive</p>
+                  <p>Linear, bottom up process</p>
+                  <p>Argues from particular to general</p>
+                  <p>Deductive</p>
+                  <p>Also linear, but top down</p>
+                  <p>Argues from general to particular</p>
+                  <p>2 less common but more complex non linear processes<br />
+                    Spiral processes with many iterations</p>
+                  <p>Abductive (Schütz)</p>
+                  <p>Develop concepts and theories from actors' everyday life and understanding; inference to the best explanation</p>
+                  <p>//Humans are linguist abductors - everyone is guessing what people are trying to say.</p>
+                  <p>Retroductive</p>
+                  <p>Use reason and imagination to create an explanatory model and then test in real world.</p>
+                  <p>Homework</p>
+                  <p>Assignment 2a</p>
+                  <p>Read 'Strategies for answering research questions' - Norman Blaikie.<br />
+                    Explain each strategy with 5 examples.</p>
+                  <p>Assignment 2b</p>
+                  <p>Examine and articulate through Writing your research/project beliefs and the evidence for it.</p>
+                  <h3 id="girish-dalvi-sirs-next-class-is-on-18-september">Girish Dalvi sir's next class is on 18 September</h3>
+                  <h2 id="wednesday-28-august-2019">Wednesday, 28 August 2019</h2>
+                  <p>AJ</p>
+                  <p>Revision class, notes added in previous sections</p>
+                  <h2 id="wednesday-4-september-2019">Wednesday, 4 September 2019 </h2>
+                  <p>Dr. Pramod Khambete</p>
+                  <p>Introduction to Research</p>
+                  <p>Surveys and Questionnaires (focus on questionnaires.)</p>
+                  <p>"Get all the information you can, we'll think of a use for it later." - common practice.</p>
+                  <p>Pros</p>
+                  <p>Popular in quant, can be used for qual also.</p>
+                  <p>Enables coverage of large spread of population.</p>
+                  <p>Cons</p>
+                  <p>Results can be misleading unless done well.</p>
+                  <p>Survey is the measurement process. Questionnaire is the highty structured instrument comprising of a set of 'questions'.</p>
+                  <p>How to set questions</p>
+                  <p>Questions may be in the form of statements, W/H question not necessary.</p>
+                  <ul>
+                    <li>
+                      <p>According to what we know</p>
+                    </li>
+                    <li>
+                      <p>Intangible/invisible things we want to know converted into 'questions'</p>
+                    </li>
+                    <li>
+                      <p>Well organised - order, grouping and mix of structured and unstructured questions.</p>
+                    </li>
+                    <li>
+                      <p>Articulated in a manner to reduce biases and errors</p>
+                    </li>
+                    <li>
+                      <p>Answers must be analysable</p>
+                    </li>
+                    <li>
+                      <p>Appropriate communication approach</p>
+                    </li>
+                    <li>
+                      <p>Interview, self-administered</p>
+                    </li>
+                    <li>
+                      <p>Paper based, telephonic, web</p>
+                    </li>
+                  </ul>
+                  <p>Behaviour and Attitude measurement</p>
+                  <p>Behaviour</p>
+                  <p>What people do</p>
+                  <p>Attitude</p>
+                  <p>A learned, stable predisposition to respond to oneself, others, objects, events and issues in a consistently favourable or unfavourable way.</p>
+                  <p>Types of Attitude</p>
+                  <p>Cognitive</p>
+                  <p>Memories, evaluations, beliefs</p>
+                  <p>Affective</p>
+                  <p>Feelings, emotions, intuitions, values</p>
+                  <p>Behaviourally bases</p>
+                  <p>Expectations, behavioural intentions</p>
+                  <p>Attitude influences behaviour and vice-versa as well.</p>
+                  <p>Developing a survey questionnaire</p>
+                  <p>1 Research Question</p>
+                  <p>What are things you want to find? What to conclude?</p>
+                  <p>2 Investigative Questions</p>
+                  <p>Specific questions that adequately cover research questions?</p>
+                  <p>3 Measurement questions</p>
+                  <p>Specific, analysable questions participants must answer.</p>
+                  <p>4 Questionnaire development</p>
+                  <p>Exact form and content of questionnaire.</p>
+                  <p>Known x Unknown</p>
+                  <p>Known Known - You know you know this.</p>
+                  <p>Known Unknown - You know you don't know this.</p>
+                  <p>Unknown Known - You don't know you know this - you have some partial information.</p>
+                  <p>Unknown Unknown - You don't know anything about this.</p>
+                  <h2 id="friday-6-september-2019">Friday, 6 September 2019 </h2>
+                  <p>Dr. Pramod Khambete</p>
+                  <p>Circle of data collection activities</p>
+                  <ol>
+                    <li>
+                      <p>Locating site/individual</p>
+                    </li>
+                    <li>
+                      <p>Gaining access/making rapport</p>
+                    </li>
+                    <li>
+                      <p>Purposeful sampling</p>
+                    </li>
+                    <li>
+                      <p>Collecting data</p>
+                    </li>
+                    <li>
+                      <p>Recording information</p>
+                    </li>
+                    <li>
+                      <p>Resolving field issues</p>
+                    </li>
+                    <li>
+                      <p>Storing data</p>
+                    </li>
+                  </ol>
+                  <p>… and loop.</p>
+                  <p>Creswell (2007)</p>
+                  <p>Be flexible</p>
+                  <p>Expect deviations from the plan, things can and will go wrong. Adapt to the situation.</p>
+                  <p>Random sampling is not always the best sampling method.</p>
+                  <p>Sampling is usually not random, sample composition may emerge during study.</p>
+                  <p>Random sample is not 100% representative sample.</p>
+                  <p>Recognise role of gatekeeper</p>
+                  <p>Voluntary participation is a must, but role of gatekeeper can introduce filters in population, or influence people to talk to you or be more guarded.</p>
+                  <p>Recording, collecting, storing data</p>
+                  <p>Nuances v/s. Hard data - need to strike a balance</p>
+                  <p>Use multiple methods/tools (eg. notes, audio rec, video rec)</p>
+                  <p>Generally, you won't be able to interview the same person again.</p>
+                  <p>Ethics</p>
+                  <p>Don't record without consent</p>
+                  <p>Participants must not face any risks, even inadvertently</p>
+                  <p>Interviewer is in position of control, there is power asymmetry. Be conscious of this.</p>
+                  <p>Interview</p>
+                  <p>Purposeful conversation - not a Q&amp;A. Needs to be flexible.</p>
+                  <p>Your aim is to get information, other person has no obligation to you and is doing you a favor.</p>
+                  <p>Generates verbal data, capturing nuances is important, capture other kinds of data if possible.</p>
+                  <p>Empathise</p>
+                  <p>"यह सब bullet point तो ठीक है, field में करके देखो" - Khambete, 2019</p>
+                  <p>Types of interview</p>
+                  <p>Open ended/unstructured</p>
+                  <ul>
+                    <li>
+                      <p>Questions are tweaked to match unfolding situation</p>
+                    </li>
+                    <li>
+                      <p>Extensive use of probes - cultural probes can be used</p>
+                    </li>
+                  </ul>
+                  <p>Semi-structured</p>
+                  <p>Structured</p>
+                  <p>Preparatory stage of interview</p>
+                  <ul>
+                    <li>
+                      <p>Give basic info about research</p>
+                    </li>
+                    <li>
+                      <p>Tell them role of interview in research</p>
+                    </li>
+                    <li>
+                      <p>Tell them their role</p>
+                    </li>
+                  </ul>
+                  <h2 id="wednesday-18-september-2019">Wednesday, 18 September 2019 </h2>
+                  <h3 id="girish-dalvi-2">Girish Dalvi</h3>
+                  <h4 id="what-do-i-want-to-know">What do I want to know?</h4>
+                  <p>Try and be very specific</p>
+                  <ul>
+                    <li>
+                      <p>What is a better way to find fonts for amateur font enthusiasts?</p>
+                    </li>
+                    <li>
+                      <p>What does better mean?</p>
+                    </li>
+                    <li>
+                      <p>How to measure improvement?</p>
+                    </li>
+                    <li>
+                      <p>Is one font better than another?</p>
+                    </li>
+                    <li>
+                      <p>Self reporting?</p>
+                    </li>
+                  </ul>
+                  <h4 id="why-do-i-want-to-know">Why do I want to know?</h4>
+                  <p>What impact will it have?</p>
+                  <ul>
+                    <li>Furthering of the epistemological imagination.</li>
+                  </ul>
+                  <h4 id="what-do-i-already-know">What do I already know?</h4>
+                  <p>How sure am I? What is the evidence?</p>
+                  <p>Anecdotal evidence is not enough. Hasty generalization. Evidence should be sustantial.</p>
+                  <h4 id="how-will-i-know-i-want-to-know">How will I know I want to know?</h4>
+                  <p>What is the process? Is this the best way to know what I want to know?</p>
+                  <h4 id="how-will-i-test-the-new-knowledge">How will I test the new knowledge?</h4>
+                  <ul>
+                    <li>
+                      <p>Validation</p>
+                    </li>
+                    <li>
+                      <p>Comparing with previous literature</p>
+                    </li>
+                    <li>
+                      <p>Replication in time, space</p>
+                    </li>
+                    <li>
+                      <p>RCT</p>
+                    </li>
+                    <li>
+                      <p>Benchmark studies</p>
+                    </li>
+                  </ul>
+                  <h2 id="friday-20-september-2019">Friday, 20 September 2019 </h2>
+                  <h3 id="girish-dalvi-3">Girish Dalvi</h3>
+                  <h4 id="claims-and-arguments">Claims and Arguments</h4>
+                  <blockquote>
+                    <p>"The first part of this talk is a rant. It's a personal rant, aimed mostly at the Mdes folks, but don't feel too bad."</p>
+                  </blockquote>
+                  <h4 id="design-exceptionalism">Design exceptionalism</h4>
+                  <p>With no prior knowledge about the domain, there is this expectation that you will be able to do better than people in the domain. Eg. go to school, think you know better than someone who has been teaching for 30 years.</p>
+                  <p>This leads to the designer as a tourist - expecting others to do things for you, your experience is at the center.</p>
+                  <h4 id="othering">Othering</h4>
+                  <p>From postmodernism - never become them, but profit from them.</p>
+                  <h4 id="designers-claim-more-than-what-they-do">Designers claim more than what they do.</h4>
+                  <p>If you claim you will make a blackboard, as a product designer, that's okay. If you claim you will radically change education in India, that's a problem.</p>
+                  <h4 id="informed-designers">Informed designers</h4>
+                  <ul>
+                    <li>Critically aware of own limitations</li>
+                    <li>Use evidence to evaluate, make judgements</li>
+                    <li>Are interested in opposing ideas</li>
+                    <li>Understanding, learning as a goal</li>
+                    <li>Avoid emotionalism, think before acting</li>
+                    <li>Open mind, open to criticism</li>
+                  </ul>
+                  <h4 id="some-words">Some words</h4>
+                  <ul>
+                    <li>Fact</li>
+                    <li>Claim</li>
+                    <li>Opinion</li>
+                    <li>Assumptiom</li>
+                    <li>Argument</li>
+                    <li>Inference</li>
+                    <li>Plausible</li>
+                    <li>Validity</li>
+                    <li>Thesis</li>
+                    <li>Evidence</li>
+                    <li>Rationale</li>
+                    <li>Warrant</li>
+                  </ul>
+                  <h4 id="every-design-is-a-claim">Every design is a claim</h4>
+                  <p>A claim is a statement that something is true.</p>
+                  <ul>
+                    <li>people might not believe it</li>
+                    <li>typically designers don't provide evidence/proof</li>
+                    <li><strong>evaluated as:</strong> accept, reject, suspend judgement (not enough proof)</li>
+                  </ul>
+                  <blockquote>
+                    <p>"Designers are, जैसे Fight Club में कहते हैं, middle children of nowhere. We are not marketing, scientists, but we'd like to be both." - Girish 2019</p>
+                  </blockquote>
+                  <h4 id="a-claim-needs-arguments">A claim needs Arguments</h4>
+                  <p>An arguments os the reason(s) why you support a claim.</p>
+                  <p>The process of exmplaining these reasons is <em>argumentation</em>.</p>
+                  <blockquote>
+                    <p>"If you accept arguments without evidence, others will ask for it. External will ask for it." - Girish 2019</p>
+                  </blockquote>
+                  <h4 id="thesis">Thesis</h4>
+                  <p>A thesis is the main idea, opinion or theory.</p>
+                  <ul>
+                    <li>contains multiple claims</li>
+                    <li>includes evidence</li>
+                  </ul>
+                  <h2 id="greek-modes-of-persuasion">Greek modes of persuasion</h2>
+                  <h4 id="logos">Logos</h4>
+                  <ul>
+                    <li>Logical appeal/appeal to reason</li>
+                    <li>Use data to support claim</li>
+                  </ul>
+                  <h4 id="ethos">Ethos</h4>
+                  <ul>
+                    <li>Appeal to character/appeal to credibility</li>
+                    <li>Use people's character/trustworthiness to support claim</li>
+                  </ul>
+                  <blockquote>
+                    <p>"If Narendra Modi says everyone should start designing for AR/VR…" - Girish 2019</p>
+                  </blockquote>
+                  <h4 id="pathos">Pathos</h4>
+                  <ul>
+                    <li>Appeal to emotion/appeal to "values &amp; beliefs"</li>
+                    <li>Use people's ability toempathize to support claim</li>
+                  </ul>
+                  <blockquote>
+                    <p>"Education in this country is terrible, think about the children…" - Girish 2019</p>
+                  </blockquote>
+                  <h4 id="toulmin-model-of-argumentation">Toulmin Model of Argumentation</h4>
+                  <ul>
+                    <li>Informal method of reasoning</li>
+                    <li>Method for constructing, analyzing arguments</li>
+                    <li>Tool for diagramming arguments</li>
+                  </ul>
+                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/InkedToulmin_Argumentation_Example.gif" alt="Diagram from Wikipedia" /></p>
+                  <h4 id="types-of-claims">Types of claims</h4>
+                  <ul>
+                    <li><strong>Fact:</strong> an empirically verifiable phenomena</li>
+                    <li><strong>Judgement/value:</strong> opinions, attitudes, subjective evaluation</li>
+                    <li><strong>Policy:</strong> advocating courses of action that should be undertaken</li>
+                    <li><strong>Definition/Classification:</strong> indicates what criteria are being used to define a term or what category something falls into</li>
+                  </ul>
+                  <h2 id="fallacies">Fallacies</h2>
+                  <p>Claims and warrants are prone to fallacies.</p>
+                  <h4 id="loaded-question">Loaded question</h4>
+                  <p>Question assumes an unjustified/unproved assumptions.</p>
+                  <ul>
+                    <li>How can teaching be made effective by using iPads?</li>
+                    <li>Are you still beating your wife?</li>
+                  </ul>
+                  <h4 id="appeal-to-popularity">Appeal to Popularity</h4>
+                  <p>AKA Bandwagon effect. Claim that something is good/true because it is popular.</p>
+                  <ul>
+                    <li>A lot of people want to come to IDC to do Mdes, so it is India's #1 design school.</li>
+                    <li>A lot of people watch Sallu bhai's movies, he must be a good actor.</li>
+                  </ul>
+                  <h4 id="hasty-generalization">Hasty Generalization</h4>
+                  <p>Claim on the basis of inadequate evidence.</p>
+                  <ul>
+                    <li>Two out of three VC students I asked don't want a studio space.</li>
+                    <li>I benefitted from swimming, you should do it too.</li>
+                  </ul>
+                  <h4 id="sweeping-generalization">Sweeping Generalization</h4>
+                  <p>Absolute statements that involve words such as all, always</p>
+                  <ul>
+                    <li>All children are creative</li>
+                    <li>School education destroys children's creativity</li>
+                  </ul>
+                  <blockquote>
+                    <p>"Children are, quite sorry to say, quite stupid." - Girish 2019</p>
+                  </blockquote>
+                  <blockquote>
+                    <p>"Creativity is measured by diverse ideas. In the study, they found children can only do one or two घिसा पिटा ideas." - Girish 2019</p>
+                  </blockquote>
+                  <blockquote>
+                    <p>"I did a study, around 80% of Bengalis love fish."</p>
+                  </blockquote>
+                  <h4 id="post-hoc-fallacy">Post Hoc Fallacy</h4>
+                  <p>Claiming cause-effect relationship simply because one event preceded another. (Co-occurence)</p>
+                  <ol>
+                    <li>Students are denied studio spaces</li>
+                    <li>Grades of students are poorer than earlier years</li>
+                    <li>Denial of studio spaces caused a drop in grades</li>
+                  </ol>
+                  <h4 id="non-sequitur-fallacy">Non sequitur Fallacy</h4>
+                  <p>Linking two ideas that have no logical connection</p>
+                  <ul>
+                    <li>Girish is a farmer, so he must be depressed.</li>
+                    <li>Roma studied in America, so she must be smart.</li>
+                  </ul>
+                  <h4 id="false-analogy">False analogy</h4>
+                  <p>Two things share some characteristics, therefore they are alike in all respects.
+                    1 VR/AR is being used in entertainment, and it is effective.
+                    2 Education should contain aspects of entertainment…</p>
+                  <h2 id="wednesday-25-september-2019">Wednesday, 25 September 2019 </h2>
+                  <h3 id="girish-dalvi-4">Girish Dalvi</h3>
+                  <h3 id="making-and-defending-design-claims">Making and defending design claims</h3>
+                  <h4 id="chaining-claims">Chaining claims</h4>
+                  <p>Claim 1 becomes the basis for claim 2.</p>
+                  <p>Claim 1 –&gt; Claim 2 –&gt; Claim 3</p>
+                  <h4 id="formative-evidence">Formative evidence</h4>
+                  <h4 id="testing">Testing</h4>
+                  <h2 id="friday-27-september-2019">Friday, 27 September 2019 </h2>
+                  <h3 id="girish-dalvi-5">Girish Dalvi</h3>
+                  <h3 id="introduction-to-research-design">Introduction to Research Design</h3>
+                  <h4 id="definintion">Definintion</h4>
+                  <ul>
+                    <li>Master plan specifying methods, procedures for collecting, analyzing the data.</li>
+                    <li>Overall plan for answering research questions and gathering evidence for your claims.</li>
+                  </ul>
+                  <h4 id="empirical-research">Empirical research</h4>
+                  <p>Based on quant.</p>
+                  <h4 id="interpretive-research">Interpretive research</h4>
+                  <p>Eg. Analysis of Ruskin Bond and Shakespeare</p>
+                  <h4 id="conceptual-variables">Conceptual variables</h4>
+                  <p>Often expressed in general, theoretical, subjective or qualitative terms.</p>
+                  <h4 id="operationalmeasured-variables">Operational/measured variables</h4>
+                  <h4 id="measuring-concepts">Measuring concepts</h4>
+                  <p>How can we measure things like:</p>
+                  <ul>
+                    <li>Studiousness : (Hours spent studying?)</li>
+                    <li>Sincerity : (Num times submitted on times?)</li>
+                    <li>Intelligence : (Intelligence test/makrks/exam score)</li>
+                    <li>Aggression : (Num violent acts)</li>
+                  </ul>
+                  <h4 id="claims">Claims</h4>
+                  <ul>
+                    <li>Step outside emotions and marketing land</li>
+                    <li>Food/pain/feeling/fonts are subjective</li>
+                    <li>Enhance experience, effective etc. is vague</li>
+                    <li>Make claims precise and specific</li>
+                  </ul>
+                  <h4 id="characteristics-of-a-good-design">Characteristics of a good design</h4>
+                  <ul>
+                    <li>Objectivity - data, analysis should be free from bias</li>
+                    <li>Reliability - design (of the research) should deliver consistent result</li>
+                    <li>Validity - should deliver accurate/correct results</li>
+                    <li>Generalization - results for sample should hold for entire population</li>
+                  </ul>
+                  <h3 id="fishers-principles-of-experiment-design">Fisher's principles of experiment design</h3>
+                  <h4 id="principle-of-replication">Principle of Replication</h4>
+                  <p>Repeat experiement more than once to increase accuracy</p>
+                  <h4 id="principle-of-randomization">Principle of Randomization</h4>
+                  <p>Effect of extraneous variables gets clubbed under general factor of 'chance'</p>
+                  <h4 id="principle-of-local-control">Principle of Local Control</h4>
+                  <p>Try and control only 1 variable</p>
+                  <h2 id="wednesday-9-october-2019">Wednesday, 9 October 2019 </h2>
+                  <h3 id="aj">AJ</h3>
+                  <h3 id="writing-research">Writing Research</h3>
+                  <h4 id="what-is-research">What is research?</h4>
+                  <p>"Creative + systematic work undertaken to increase the stock of knowledge, inclusing knowledge of hamns, culture, society, and the use of this stock to devise new applications."</p>
+                  <h4 id="what-is-phd">What is PhD?</h4>
+                  <blockquote>
+                    <p>"Keep pushing." - AJ 2019</p>
+                  </blockquote>
+                  <h4 id="whitepaper">Whitepaper</h4>
+                  <ul>
+                    <li><strong>In theory:</strong> report/guide that informs readers concisely about complex issue</li>
+                    <li><strong>Marketing:</strong> form of marketing presentation</li>
+                  </ul>
+                  <h4 id="position-paper">Position paper</h4>
+                  <p>I feel that/in my opinion, if we tried this, it might lead to that, so we should do this.</p>
+                  <h4 id="case-study">Case Study</h4>
+                  <p>This is what i made, this is how it works, this is why it's cool.</p>
+                  <h4 id="research-paper-paper">Research paper ("paper")</h4>
+                  <ul>
+                    <li>Describes learning from a particular research activity.</li>
+                    <li>I blind peer reviewed (often double- or triple-blind).</li>
+                  </ul>
+                  <blockquote>
+                    <p>"It's all real." - AJ 2019</p>
+                  </blockquote>
+                </div>
+                <!-- Add backlinks to the current page --></div>
+              <div id="copyright">
+                <p id="copyright-notice">Gyan Lakhwani. 2022, powered by <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io">Jekyll Garden</a></p>
+              </div>
+              <script src="/assets/js/modeswitcher.js"></script></main>
+          </div>
+          <!--- CASE 3 : Static Page --><!--- CASE 4 :  Blog Listing page --><!--- CASE 5 :  Notes Listing page --></div>
+      </section>
+    </body>
+  </html>

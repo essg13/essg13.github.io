@@ -1,0 +1,183 @@
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan, Asim K T
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Digital Garden" property="og:site_name" />
+    <meta
+        content="A Jekyll theme for Obsidian users to build digital garden"
+        property="og:description">
+      <meta content="http://localhost:4000/about/" property="article:author">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet"><meta content="Theory - PS626: AI, Data & Policy" property="og:title">
+      <meta content="article" property="og:type">
+      <meta content="http://localhost:4000/ai" property="og:url"><title>Gyan Lakhwani</title>
+      <link rel="canonical" href="http://localhost:4000/ai" />
+      <link rel="apple-touch-icon" href="/assets/img/profile.png">
+      <link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="16x16" />
+      <link href="/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/main.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" />
+      <!--[if IE]>
+        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+      <![endif]-->
+      <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+      <link rel="alternate" type="application/rss+xml" href="http://localhost:4000/feed.xml">
+    </head>
+    <body><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="../index.html">
+            <svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8008 11.0919C29.3912 -1.1857 52.5295 -3.86015 67.1531 9.72177C72.8779 15.0388 75.1649 21.7219 75.3372 27.8677C75.5079 33.9547 73.6068 39.6661 70.7449 43.1234C65.0375 50.0186 55.6542 52.1958 47.7817 52.4359C46.0372 57.5928 43.203 62.2357 38.2212 64.8853C32.6638 67.841 27.3363 66.2512 24.9157 62.709C23.7165 60.9541 23.2728 58.733 24.011 56.5686C24.7486 54.4057 26.5693 52.5703 29.3697 51.3388C34.1619 49.2313 39.7977 49.0095 45.1739 48.9663C46.5194 43.9576 47.3458 37.5214 47.9737 32.2494C47.8626 32.2809 47.7147 32.3357 47.5243 32.4299C46.5613 32.9064 45.3122 33.9736 43.7346 35.4974C43.2222 35.9923 42.6757 36.5348 42.1076 37.0987C41.0299 38.1683 39.8744 39.3153 38.7255 40.3623C36.9538 41.9767 35.0059 43.5392 32.9816 44.5098C30.3336 45.7796 27.0061 45.8055 24.3801 44.345C21.6228 42.8114 19.8853 39.781 20.3166 35.5517C21.3918 25.009 30.5217 17.4814 39.9011 15.6693C44.6376 14.7542 49.6044 15.2525 53.8027 17.6732C58.0355 20.1138 61.3051 24.405 62.7793 30.7093C62.9993 31.6504 62.4148 32.5917 61.4737 32.8118C60.5326 33.0318 59.5913 32.4473 59.3712 31.5062C58.0896 26.0256 55.3486 22.6046 52.0545 20.7053C48.7259 18.7861 44.6495 18.3167 40.565 19.1058C32.3025 20.7021 24.6793 27.2702 23.7986 35.9068C23.4953 38.8802 24.6614 40.4965 26.0813 41.2862C27.6326 42.149 29.756 42.175 31.4683 41.3539C33.0211 40.6093 34.6647 39.3275 36.368 37.7753C37.4696 36.7715 38.5171 35.7311 39.555 34.7001C40.1381 34.121 40.7181 33.5449 41.3031 32.9799C42.8363 31.499 44.4505 30.0458 45.9721 29.2929C46.751 28.9075 47.6867 28.6115 48.682 28.7378C49.7514 28.8736 50.6156 29.4602 51.2489 30.3168C51.5136 30.6748 51.6318 31.1202 51.5796 31.5623C50.9824 36.6209 50.1769 43.3706 48.8079 48.8892C55.9616 48.4933 63.5314 46.3491 68.0488 40.8917C70.2743 38.2031 71.99 33.3669 71.8386 27.9657C71.6888 22.6233 69.7147 16.8776 64.7712 12.2863C51.7479 0.190604 30.6842 2.36296 18.1471 13.6891C11.9952 19.2467 7.75466 28.3715 6.74672 38.101C5.74071 47.8117 7.97737 57.8869 14.4577 65.4102C20.8788 72.8647 32.8654 77.1043 44.6021 76.1607C56.2569 75.2237 67.3079 69.213 72.1864 56.5886C72.5348 55.687 73.548 55.2386 74.4495 55.587C75.3511 55.9354 75.7995 56.9486 75.4511 57.8502C69.9806 72.0064 57.5521 78.6308 44.8826 79.6494C32.2951 80.6614 19.1126 76.1772 11.8059 67.6944C4.55843 59.2806 2.18427 48.1757 3.26535 37.7403C4.34448 27.3237 8.88895 17.3361 15.8008 11.0919ZM44.0471 52.4804C39.0957 52.5559 34.5643 52.8779 30.7786 54.5426C28.6273 55.4887 27.667 56.6913 27.3236 57.6983C26.9808 58.7037 27.1561 59.7842 27.8054 60.7342C29.0814 62.6015 32.3683 64.0339 36.5777 61.7952C40.1402 59.9004 42.4608 56.6288 44.0471 52.4804Z" fill="var(--text-main)"/>
+            </svg>
+            <h4>Gyan Lakhwani</h4>
+          </a>
+          <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
+            <div class="buttons">
+              <a class="button is-text">
+                <span class="icon is-small">
+                  <img src="../assets/img/sun.svg" id="theme-toggle-img--mobile">
+                </span>
+              </a>
+            </div>
+          </div>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="../notes"  class="navbar-item">
+              Writing
+            </a>
+          </div>
+          <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-text">
+                  <span class="icon is-small">
+                    <img src="../assets/img/sun.svg" id="theme-toggle-img">
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script src="/assets/js/Hamburger.js"></script>
+      <section class="section">
+        <div class="columns is-centered">
+          <!--- CASE 1 : Homepage--><!---CASE 2 : Notes & Blog Page-->
+          <div class="column is-three-fifths">
+            <main>
+              <div class="note-page-section">
+                <div class="buttons for-back-home"><a class="button is-text button__page-back" onclick="window.location.assign('/');"><span class="icon is-small">
+                      <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.0309 0.468998C11.1007 0.538667 11.1561 0.62143 11.1939 0.712548C11.2318 0.803665 11.2512 0.901347 11.2512 0.999998C11.2512 1.09865 11.2318 1.19633 11.1939 1.28745C11.1561 1.37857 11.1007 1.46133 11.0309 1.531L2.56038 10L11.0309 18.469C11.1717 18.6098 11.2508 18.8008 11.2508 19C11.2508 19.1992 11.1717 19.3902 11.0309 19.531C10.89 19.6718 10.699 19.7509 10.4999 19.7509C10.3007 19.7509 10.1097 19.6718 9.96887 19.531L0.968875 10.531C0.899031 10.4613 0.843616 10.3786 0.805806 10.2874C0.767997 10.1963 0.748535 10.0986 0.748535 10C0.748535 9.90135 0.767997 9.80367 0.805806 9.71255C0.843616 9.62143 0.899031 9.53867 0.968875 9.469L9.96887 0.468998C10.0385 0.399153 10.1213 0.343739 10.2124 0.305929C10.3035 0.26812 10.4012 0.248657 10.4999 0.248657C10.5985 0.248657 10.6962 0.26812 10.7873 0.305929C10.8784 0.343739 10.9612 0.399153 11.0309 0.468998Z"
+                                        fill="var(--text-main)" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <h1 class="note-title">Theory - PS626: AI, Data & Policy</h1>
+                <h2 class="note-subtitle">These are my lab notes from PS:626 AI, Data & Policy, an elective offered by Prof. Anupam Guha of the Centre for Policy Studies at IIT Bombay.</h2>
+                <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+                <div class="content">
+                  <h3 id="why-did-i-take-this-elective">Why did I take this elective?</h3>
+                  <p>The fourth and last semester of the IDC M.Des. program has a research project and a design project, but no lectures. Masters students at IIT, however, can choose to take one of a <a href="http://www.iitb.ac.in/newacadhome/Instituteelectivelist2019.pdf">set of electives</a>. I thought it would be interesting to make the most of being a design school in IIT Bombay, and take a course offerred by another department. I took the AI, Data and Policy partly because I follow <a href="https://twitter.com/anupam_guha">Prof. Guha on Twitter</a> and I happened to see his tweet about the course, and partly because my internship at Microsoft in Summer 2019 involved working with AI, and I felt a little crippled by my inability to actually prototype anything as a designer and wanted to learn more.</p>
+                  <h3 id="initial-impressions">Initial impressions</h3>
+                  <p>I was especially interested in how the course was pitched - over the past year I've realised my limitations as a designer being able to create any real impact in social problems without significant policy intervention, and I wanted to see what looking at AI through such a lens could look like. There are two classes a week (Monday and Thursday from 2pm - 3:30pm) and classes alternate between theory classes discussing the socio-political aspect of AI, and coding classes that cover Machine Learning in Python. I thought this was a very interesting approach to the problem, since understanding AI requires both an understanding of the technical aspect and the social, political, ethical and economic impact of AI.</p>
+                  <h3 id="managing-courseload-idc-mdes">Managing courseload (IDC M.Des)</h3>
+                  <p>IDC courseload is heavy as it is, and so I checked with my faculty advisor and project guide before taking this course. They said it was a good idea to be exposed to courses outside IDC, but warned me about the courseload and suggested that I could take it as an audit course. DRS and P3 are 12 and 30 credits respectively, and the elective is 6, which adds up to a 48 credit semester. It is possible to take courses as audit courses or as additional learning courses, which do not impact your CPI. I have currently taken the course as an additional learning course.</p>
+                  <h3 id="some-thoughts-about-the-first-class-and-this-paper">Some thoughts about the first class and <a href="https://royalsocietypublishing.org/doi/full/10.1098/rsta.2018.0087">this paper</a></h3>
+                  <p>About two years ago, I read a Twitter thread <a href="https://twitter.com/yonatanzunger/status/975545004205654016">[1]</a> that said the field of Computer Science has not had it’s reckoning yet. It said that unlike Chemistry that had seen dynamite and chemical weapons, and Physics that had seen the atom bomb, the field of Computer Science had not yet had a moment that ‘seared the importance of ethics and consequences’ into the minds of everyone in the field.</p>
+                  <p>This has stayed with me as an IT engineer turned into an Interaction Designer. The road to hell is paved with good intentions, and the first time Google Photos let me search through my photos with words felt like magic, but I also read about the app labelling black people as gorillas <a href="https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai">[2]</a>. This made me wonder about all the trust we put in what is essentially a black box for decision making. AI systems could be mostly useful, but every now and then spit out wrong or biased results, with no way of understanding why. Data collection and algorithmic curation of everything we do online has become so normalised that the constant surveillance has become implicitly accepted as we use identities controlled by corporations to manage our entire identities online.</p>
+                  <p>My summer internship involved working on an AI product, and had to understand and weigh in on issues with data availability to train a model, and issues with model accuracy. As a designer, I felt a little crippled by my limited grasp on the technology and inability to actually prototype anything myself. I read about issues like explaining to the user where smart inputs from an AI agent were coming from, and explaining that the information could be inaccurate sometimes. This motivated me to take this course, and the structure of alternating classes discussing the technical and socio-politico-economic aspects of artificial intelligence was a surprise but in retrospect seems like the obvious approach to be able to completely understand the possible impacts of a piece of AI technology.</p>
+                  <p>Vidushi Marda’s paper on AI Policy in India <a href="https://royalsocietypublishing.org/doi/full/10.1098/rsta.2018.0087">[3]</a> discusses a framework for analysis of social and ethical concerns of ML systems in three stages: data, model and policy. The part of the paper I feel is especially interesting against the wave of protests in India is the use of AI for surveillance and policing by the Indian state. With Delhi Police using an automated facial recognition to find ‘rabble-rousers and miscreants’ <a href="https://thewire.in/government/delhi-police-is-now-using-facial-recognition-software-to-screen-habitual-protestors">[4]</a> at Narendra Modi’s event at Ramlila Maidan, the government has shown how free speech and privacy could be at risk for dissenters.</p>
+                  <p>This is despite the 2015 striking down of Section 66A of India’s Information Technology Act by the Supreme Court because it was said to have a ‘chilling effect on free speech’. In a 2017 statement, the Indian supreme court also recognised informational privacy as a fundamental right. With practice preceding policy, there is a void on clear policy against the use of AI by the state in a way that violates fundamental freedoms of the citizens.</p>
+                  <p>#20 Jan 2020
+                    Monday, 2pm</p>
+                  <h3 id="references">References</h3>
+                  <p>[1] <a href="https://twitter.com/yonatanzunger/status/975545004205654016">Twitter thread by Yonatan Zunger</a></p>
+                  <p>[2] <a href="https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai">Google ‘fixed’ its racist algorithm by removing gorillas from its image-labeling tech</a></p>
+                  <p>[3] <a href="https://royalsocietypublishing.org/doi/full/10.1098/rsta.2018.0087">Artificial intelligence policy in India: a framework for engaging the limits of data-driven decision-making</a></p>
+                  <p>[4] <a href="https://thewire.in/government/delhi-police-is-now-using-facial-recognition-software-to-screen-habitual-protestors">Delhi Police Is Now Using Facial Recognition Software to Screen 'Habitual Protestors'</a></p>
+                  <h1 id="reading-list">Reading List</h1>
+                  <p>Readings assigned during the course.</p>
+                  <ul>
+                    <li>
+                      <p>Artificial intelligence policy in India: a framework for engaging the limits of data-driven decision-making.<br />
+                        <em>Vidushi Marda</em><br />
+                        <a href="https://royalsocietypublishing.org/doi/abs/10.1098/rsta.2018.0087">PDF</a></p>
+                    </li>
+                    <li>
+                      <p>Perspectives on Issues in AI Governance<br />
+                        <em>Google AI</em><br />
+                        <a href="https://ai.google/static/documents/perspectives-on-issues-in-ai-governance.pdf">PDF</a></p>
+                    </li>
+                    <li>
+                      <p>National Strategy for Artificial Intelligence #AIFORALL <br />
+                        <em>Niti Aayog</em><br />
+                        <a href="https://niti.gov.in/writereaddata/files/document_publication/NationalStrategy-for-AI-Discussion-Paper.pdf">PDF</a></p>
+                    </li>
+                    <li>
+                      <p>Mind: A Brief Introduction<br />
+                        <em>John R. Searle</em><br />
+                        <a href="https://isidore.co/calibre/get/PDF/Searle%2C%20John%20R_-Mind_%20A%20Brief%20Introduction_4060.pdf">PDF</a></p>
+                    </li>
+                    <li>
+                      <p>Feuding Families and Former Friends: Unsupervised Learning for Dynamic Fictional Relationships<br />
+                        <em>Mohit Iyyer, Anupam Guha, Snigdha Chaturvedi, Jordan Boyd-Graber, Hal Daume III</em><br />
+                        <a href="https://people.cs.umass.edu/~miyyer/pubs/2016_naacl_relationships.pdf">PDF</a></p>
+                    </li>
+                    <li>
+                      <p>The Amazing Mysteries of the Gutter: Drawing Inferences Between Panels in Comic Book Narratives<br />
+                        <em>Mohit Iyyer, Varun Manjunatha, Anupam Guha, Yogarshi Vyas, Jordan Boyd-Graber, Hal Daume III, Larry Davis</em><br />
+                        <a href="http://zpascal.net/cvpr2017/Iyyer_The_Amazing_Mysteries_CVPR_2017_paper.pdf">PDF</a></p>
+                    </li>
+                  </ul>
+                  <h1 id="things-to-check-out">Things to check out</h1>
+                  <h3 id="eliza">ELIZA</h3>
+                  <p>Chatbot created in the 1960s at MIT Artificial Intelligence Laboratory. <br />
+                    <a href="http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm">Try here</a></p>
+                </div>
+                <!-- Add backlinks to the current page --></div>
+              <div id="copyright">
+                <p id="copyright-notice">Gyan Lakhwani. 2022, powered by <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io">Jekyll Garden</a></p>
+              </div>
+              <script src="/assets/js/modeswitcher.js"></script></main>
+          </div>
+          <!--- CASE 3 : Static Page --><!--- CASE 4 :  Blog Listing page --><!--- CASE 5 :  Notes Listing page --></div>
+      </section>
+    </body>
+  </html>

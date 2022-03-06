@@ -1,0 +1,128 @@
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan, Asim K T
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Digital Garden" property="og:site_name" />
+    <meta
+        content="A Jekyll theme for Obsidian users to build digital garden"
+        property="og:description">
+      <meta content="http://localhost:4000/about/" property="article:author">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet"><meta content="Research Methods in HCI - Website" property="og:title">
+      <meta content="article" property="og:type">
+      <meta content="http://localhost:4000/notes/intro-to-qrm" property="og:url"><title>Gyan Lakhwani</title>
+      <link rel="canonical" href="http://localhost:4000/notes/intro-to-qrm" />
+      <link rel="apple-touch-icon" href="/assets/img/profile.png">
+      <link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="16x16" />
+      <link href="/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/main.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" />
+      <!--[if IE]>
+        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+      <![endif]-->
+      <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+      <link rel="alternate" type="application/rss+xml" href="http://localhost:4000/feed.xml">
+    </head>
+    <body><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="../index.html">
+            <svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8008 11.0919C29.3912 -1.1857 52.5295 -3.86015 67.1531 9.72177C72.8779 15.0388 75.1649 21.7219 75.3372 27.8677C75.5079 33.9547 73.6068 39.6661 70.7449 43.1234C65.0375 50.0186 55.6542 52.1958 47.7817 52.4359C46.0372 57.5928 43.203 62.2357 38.2212 64.8853C32.6638 67.841 27.3363 66.2512 24.9157 62.709C23.7165 60.9541 23.2728 58.733 24.011 56.5686C24.7486 54.4057 26.5693 52.5703 29.3697 51.3388C34.1619 49.2313 39.7977 49.0095 45.1739 48.9663C46.5194 43.9576 47.3458 37.5214 47.9737 32.2494C47.8626 32.2809 47.7147 32.3357 47.5243 32.4299C46.5613 32.9064 45.3122 33.9736 43.7346 35.4974C43.2222 35.9923 42.6757 36.5348 42.1076 37.0987C41.0299 38.1683 39.8744 39.3153 38.7255 40.3623C36.9538 41.9767 35.0059 43.5392 32.9816 44.5098C30.3336 45.7796 27.0061 45.8055 24.3801 44.345C21.6228 42.8114 19.8853 39.781 20.3166 35.5517C21.3918 25.009 30.5217 17.4814 39.9011 15.6693C44.6376 14.7542 49.6044 15.2525 53.8027 17.6732C58.0355 20.1138 61.3051 24.405 62.7793 30.7093C62.9993 31.6504 62.4148 32.5917 61.4737 32.8118C60.5326 33.0318 59.5913 32.4473 59.3712 31.5062C58.0896 26.0256 55.3486 22.6046 52.0545 20.7053C48.7259 18.7861 44.6495 18.3167 40.565 19.1058C32.3025 20.7021 24.6793 27.2702 23.7986 35.9068C23.4953 38.8802 24.6614 40.4965 26.0813 41.2862C27.6326 42.149 29.756 42.175 31.4683 41.3539C33.0211 40.6093 34.6647 39.3275 36.368 37.7753C37.4696 36.7715 38.5171 35.7311 39.555 34.7001C40.1381 34.121 40.7181 33.5449 41.3031 32.9799C42.8363 31.499 44.4505 30.0458 45.9721 29.2929C46.751 28.9075 47.6867 28.6115 48.682 28.7378C49.7514 28.8736 50.6156 29.4602 51.2489 30.3168C51.5136 30.6748 51.6318 31.1202 51.5796 31.5623C50.9824 36.6209 50.1769 43.3706 48.8079 48.8892C55.9616 48.4933 63.5314 46.3491 68.0488 40.8917C70.2743 38.2031 71.99 33.3669 71.8386 27.9657C71.6888 22.6233 69.7147 16.8776 64.7712 12.2863C51.7479 0.190604 30.6842 2.36296 18.1471 13.6891C11.9952 19.2467 7.75466 28.3715 6.74672 38.101C5.74071 47.8117 7.97737 57.8869 14.4577 65.4102C20.8788 72.8647 32.8654 77.1043 44.6021 76.1607C56.2569 75.2237 67.3079 69.213 72.1864 56.5886C72.5348 55.687 73.548 55.2386 74.4495 55.587C75.3511 55.9354 75.7995 56.9486 75.4511 57.8502C69.9806 72.0064 57.5521 78.6308 44.8826 79.6494C32.2951 80.6614 19.1126 76.1772 11.8059 67.6944C4.55843 59.2806 2.18427 48.1757 3.26535 37.7403C4.34448 27.3237 8.88895 17.3361 15.8008 11.0919ZM44.0471 52.4804C39.0957 52.5559 34.5643 52.8779 30.7786 54.5426C28.6273 55.4887 27.667 56.6913 27.3236 57.6983C26.9808 58.7037 27.1561 59.7842 27.8054 60.7342C29.0814 62.6015 32.3683 64.0339 36.5777 61.7952C40.1402 59.9004 42.4608 56.6288 44.0471 52.4804Z" fill="var(--text-main)"/>
+            </svg>
+            <h4>Gyan Lakhwani</h4>
+          </a>
+          <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
+            <div class="buttons">
+              <a class="button is-text">
+                <span class="icon is-small">
+                  <img src="../assets/img/sun.svg" id="theme-toggle-img--mobile">
+                </span>
+              </a>
+            </div>
+          </div>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="../notes"  class="navbar-item">
+              Writing
+            </a>
+          </div>
+          <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-text">
+                  <span class="icon is-small">
+                    <img src="../assets/img/sun.svg" id="theme-toggle-img">
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script src="/assets/js/Hamburger.js"></script>
+      <section class="section">
+        <div class="columns is-centered">
+          <!--- CASE 1 : Homepage--><!---CASE 2 : Notes & Blog Page-->
+          <div class="column is-three-fifths">
+            <main>
+              <div class="note-page-section">
+                <div class="buttons for-back-home"><a class="button is-text button__page-back" onclick="window.location.assign('/');"><span class="icon is-small">
+                      <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.0309 0.468998C11.1007 0.538667 11.1561 0.62143 11.1939 0.712548C11.2318 0.803665 11.2512 0.901347 11.2512 0.999998C11.2512 1.09865 11.2318 1.19633 11.1939 1.28745C11.1561 1.37857 11.1007 1.46133 11.0309 1.531L2.56038 10L11.0309 18.469C11.1717 18.6098 11.2508 18.8008 11.2508 19C11.2508 19.1992 11.1717 19.3902 11.0309 19.531C10.89 19.6718 10.699 19.7509 10.4999 19.7509C10.3007 19.7509 10.1097 19.6718 9.96887 19.531L0.968875 10.531C0.899031 10.4613 0.843616 10.3786 0.805806 10.2874C0.767997 10.1963 0.748535 10.0986 0.748535 10C0.748535 9.90135 0.767997 9.80367 0.805806 9.71255C0.843616 9.62143 0.899031 9.53867 0.968875 9.469L9.96887 0.468998C10.0385 0.399153 10.1213 0.343739 10.2124 0.305929C10.3035 0.26812 10.4012 0.248657 10.4999 0.248657C10.5985 0.248657 10.6962 0.26812 10.7873 0.305929C10.8784 0.343739 10.9612 0.399153 11.0309 0.468998Z"
+                                        fill="var(--text-main)" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <h1 class="note-title">Research Methods in HCI - Website</h1>
+                <h2 class="note-subtitle">Designing and coding a website for a course at IDC for industry professionals and academics.</h2>
+                <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+                <div class="content">
+                  <p><img src="https://gyanl.com/assets/Intro-QRM.png" alt="Screenshot of the web page&quot;" /></p>
+                  <h6 id="live-site-and-mirror"><a href="http://www.idc.iitb.ac.in/~anirudha/QRMHCI20_02/">Live site</a> and <a href="https://gyanl.com/qrm2020/">Mirror</a></h6>
+                </div>
+                <!-- Add backlinks to the current page --></div>
+              <div id="copyright">
+                <p id="copyright-notice">Gyan Lakhwani. 2022, powered by <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io">Jekyll Garden</a></p>
+              </div>
+              <script src="/assets/js/modeswitcher.js"></script></main>
+          </div>
+          <!--- CASE 3 : Static Page --><!--- CASE 4 :  Blog Listing page --><!--- CASE 5 :  Notes Listing page --></div>
+      </section>
+    </body>
+  </html>

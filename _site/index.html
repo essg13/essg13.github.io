@@ -1,0 +1,962 @@
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan, Asim K T
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Digital Garden" property="og:site_name" />
+    <meta
+        content="A Jekyll theme for Obsidian users to build digital garden"
+        property="og:description">
+      <meta content="http://localhost:4000/about/" property="article:author">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet"><meta content="website" property="og:type">
+      <meta content="http://localhost:4000/" property="og:url"><title>Gyan Lakhwani</title>
+      <link rel="canonical" href="http://localhost:4000/" />
+      <link rel="apple-touch-icon" href="/assets/img/profile.png">
+      <link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="16x16" />
+      <link href="/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/main.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+      <link href="/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" />
+      <!--[if IE]>
+        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+      <![endif]-->
+      <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+      <link rel="alternate" type="application/rss+xml" href="http://localhost:4000/feed.xml">
+    </head>
+    <body><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="../index.html">
+            <svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8008 11.0919C29.3912 -1.1857 52.5295 -3.86015 67.1531 9.72177C72.8779 15.0388 75.1649 21.7219 75.3372 27.8677C75.5079 33.9547 73.6068 39.6661 70.7449 43.1234C65.0375 50.0186 55.6542 52.1958 47.7817 52.4359C46.0372 57.5928 43.203 62.2357 38.2212 64.8853C32.6638 67.841 27.3363 66.2512 24.9157 62.709C23.7165 60.9541 23.2728 58.733 24.011 56.5686C24.7486 54.4057 26.5693 52.5703 29.3697 51.3388C34.1619 49.2313 39.7977 49.0095 45.1739 48.9663C46.5194 43.9576 47.3458 37.5214 47.9737 32.2494C47.8626 32.2809 47.7147 32.3357 47.5243 32.4299C46.5613 32.9064 45.3122 33.9736 43.7346 35.4974C43.2222 35.9923 42.6757 36.5348 42.1076 37.0987C41.0299 38.1683 39.8744 39.3153 38.7255 40.3623C36.9538 41.9767 35.0059 43.5392 32.9816 44.5098C30.3336 45.7796 27.0061 45.8055 24.3801 44.345C21.6228 42.8114 19.8853 39.781 20.3166 35.5517C21.3918 25.009 30.5217 17.4814 39.9011 15.6693C44.6376 14.7542 49.6044 15.2525 53.8027 17.6732C58.0355 20.1138 61.3051 24.405 62.7793 30.7093C62.9993 31.6504 62.4148 32.5917 61.4737 32.8118C60.5326 33.0318 59.5913 32.4473 59.3712 31.5062C58.0896 26.0256 55.3486 22.6046 52.0545 20.7053C48.7259 18.7861 44.6495 18.3167 40.565 19.1058C32.3025 20.7021 24.6793 27.2702 23.7986 35.9068C23.4953 38.8802 24.6614 40.4965 26.0813 41.2862C27.6326 42.149 29.756 42.175 31.4683 41.3539C33.0211 40.6093 34.6647 39.3275 36.368 37.7753C37.4696 36.7715 38.5171 35.7311 39.555 34.7001C40.1381 34.121 40.7181 33.5449 41.3031 32.9799C42.8363 31.499 44.4505 30.0458 45.9721 29.2929C46.751 28.9075 47.6867 28.6115 48.682 28.7378C49.7514 28.8736 50.6156 29.4602 51.2489 30.3168C51.5136 30.6748 51.6318 31.1202 51.5796 31.5623C50.9824 36.6209 50.1769 43.3706 48.8079 48.8892C55.9616 48.4933 63.5314 46.3491 68.0488 40.8917C70.2743 38.2031 71.99 33.3669 71.8386 27.9657C71.6888 22.6233 69.7147 16.8776 64.7712 12.2863C51.7479 0.190604 30.6842 2.36296 18.1471 13.6891C11.9952 19.2467 7.75466 28.3715 6.74672 38.101C5.74071 47.8117 7.97737 57.8869 14.4577 65.4102C20.8788 72.8647 32.8654 77.1043 44.6021 76.1607C56.2569 75.2237 67.3079 69.213 72.1864 56.5886C72.5348 55.687 73.548 55.2386 74.4495 55.587C75.3511 55.9354 75.7995 56.9486 75.4511 57.8502C69.9806 72.0064 57.5521 78.6308 44.8826 79.6494C32.2951 80.6614 19.1126 76.1772 11.8059 67.6944C4.55843 59.2806 2.18427 48.1757 3.26535 37.7403C4.34448 27.3237 8.88895 17.3361 15.8008 11.0919ZM44.0471 52.4804C39.0957 52.5559 34.5643 52.8779 30.7786 54.5426C28.6273 55.4887 27.667 56.6913 27.3236 57.6983C26.9808 58.7037 27.1561 59.7842 27.8054 60.7342C29.0814 62.6015 32.3683 64.0339 36.5777 61.7952C40.1402 59.9004 42.4608 56.6288 44.0471 52.4804Z" fill="var(--text-main)"/>
+            </svg>
+            <h4>Gyan Lakhwani</h4>
+          </a>
+          <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
+            <div class="buttons">
+              <a class="button is-text">
+                <span class="icon is-small">
+                  <img src="../assets/img/sun.svg" id="theme-toggle-img--mobile">
+                </span>
+              </a>
+            </div>
+          </div>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="../notes"  class="navbar-item">
+              Writing
+            </a>
+          </div>
+          <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-text">
+                  <span class="icon is-small">
+                    <img src="../assets/img/sun.svg" id="theme-toggle-img">
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script src="/assets/js/Hamburger.js"></script>
+      <section class="section">
+        <div class="columns is-centered">
+          <!--- CASE 1 : Homepage--><!--- Show Feed Part -->
+          <div class="column is-half">
+            <div class="block">
+              <h1>Hey, I'm Gyan.</h1>
+              <p>
+                Hi! My name is Gyan. I like technology, design and cats.
+              </p>
+              <p>
+                I currently work on Voice Experiences at Microsoft. In the past, I studied Interaction Design at IDC School of Design, and worked with startups on creating cool apps.
+              </p>
+              <p>
+                These are some thoughts.
+              </p>
+            </div>
+            <!-- search bar -->
+            <div class="block">
+              <input class="input is-medium" type="text" placeholder="Search notes.." id="search-input" autocomplete="off">
+              <div id="search-results" class="search-results"></div>
+            </div>
+            <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+            <script src="/assets/js/Search.js"></script><!-- feed with filter-->
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/26">
+                <a href="/26" style="text-decoration: none;">
+                  <h4>Turning 26</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Turning 26 (2022)
+                      This year was a better year than the last one. It feels, finally, that the world is back to normal. A new normal maybe, where we wear masks all the time and laugh nervously each time someone coughs. I am glad to once again be in a world f...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Webdev-Resources">
+                <a href="/notes/Webdev-Resources" style="text-decoration: none;">
+                  <h4>Webdev Resources</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      JavaScript
+                      Splitting.js
+                      JS library to iterate through every instance of class (or to break a single div into multiple divs) to be able to animate them individually. Useful for animating text char by char or delaying each item in a list.
+                      Alpine.js
+                      Simple...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Digital-Garden">
+                <a href="/notes/Digital-Garden" style="text-decoration: none;">
+                  <h4>Digital Garden</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      I&#39;ve been fascinated by the idea of Digital Gardens for some time now. I really enjoy Andy Matuschak&#39;s working notes, where he writes personal notes but shares them publicly. He calls this working with the garage door up).
+                      My goals with this websit...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/IDC">
+                <a href="/notes/IDC" style="text-decoration: none;">
+                  <h4>IDC</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      I studied Interaction Design at IDC from 2018-20. If you are interested in applying to IDC, look at CEED Exam &amp;amp; IDC Interview.
+                      Courses
+                      These are the courses I took at IDC.
+                      Semester 1
+                      Intro to Photography
+                      Introduction to Typography
+                      Colour, Composit...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Feedback">
+                <a href="/notes/Feedback" style="text-decoration: none;">
+                  <h4>Feedback</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Giving feedback
+                      A thumb rule I use for feedback is—what can I say that would help this person get one level higher with their work? This helps scale feedback to where someone is currently at in terms of skills, thought process and ability to execute.
+                      Givi...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/The-Left-Hand-of-Darkness">
+                <a href="/notes/The-Left-Hand-of-Darkness" style="text-decoration: none;">
+                  <h4>The Left Hand of Darkness</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      The Left Hand of Darkness felt unlike anything I&#39;ve ever read. The plot is quite simple, and yet this is one of those books where the plot barely matters.
+                      5 Stars
+                      See Library for more things I liked reading.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Library">
+                <a href="/notes/Library" style="text-decoration: none;">
+                  <h4>Library</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Lena">
+                <a href="/notes/Lena" style="text-decoration: none;">
+                  <h4>Lena</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      In the future, MMAcevedo is the first human brain to be scanned in a format where it can be &quot;run&quot; as a digital program.
+                      The story draws parallels to the Lenna image - an image frequently used as a benchmark for image manipulation algorithms.
+                      You...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Chaos">
+                <a href="/notes/Chaos" style="text-decoration: none;">
+                  <h4>Chaos</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      I was reading Sapiens by Yuval Noah Harari, and one of the concepts the author mentions caught my attention. According to Harari, there are two main classifications of chaos.
+                      First Order Chaos
+                      An unpredictable phenomenon that doesn’t respond to predictio...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/The-Social-Tadka">
+                <a href="/notes/The-Social-Tadka" style="text-decoration: none;">
+                  <h4>The Social Tadka</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Live site and Mirror
+                      Live site and Mirror
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Public-Notes-Website-Concept">
+                <a href="/notes/Public-Notes-Website-Concept" style="text-decoration: none;">
+                  <h4>Public Notes Website Concept</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      WYSIWYG website
+                      I don&#39;t like the experience of writing in one format (markdown in a text editor) and consuming in another (a website). The writing and reading experiences should be as similiar to each other as possible.
+                      Posts are public by default
+                      I ...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/portfolios">
+                <a href="/portfolios" style="text-decoration: none;">
+                  <h4>Portfolio Sites</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      A portfolio is maybe the most important thing for a designer looking for work. I talk to a lot of early career designers who have done great work, but don&#39;t adequately show it on their portfolios. This is a list of sites that I think are great to look a...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/25">
+                <a href="/25" style="text-decoration: none;">
+                  <h4>Turning 25</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Turning 25 (2021)
+                      This has been a weird year. I find myself feeling a little bit melancholic, as I often do on birthdays. This is a feeling I am used to at this point, and I know that the way to deal with it is to plan out a nice day for myself in advance....
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Markdown-Rendered">
+                <a href="/notes/Markdown-Rendered" style="text-decoration: none;">
+                  <h4>H1</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      This page contains a quick reference to all markdown properties. 90% of this was part of the Simple Jekyll theme, which we forked to built this one. Great job, makers!
+                      By the way, how did you reach this page?  From backlink under Hidden Note] or from feed,...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Hindsight-in-2020">
+                <a href="/notes/Hindsight-in-2020" style="text-decoration: none;">
+                  <h4>Hindsight in 2020</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      January 2020 started with news articles about massive bush fires that had been raging in Australia. I remember looking at photos and the word &#39;apocalyptic&#39; came to mind. If you&#39;re the sort of person who believes in omens, this looked like one. T...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Financial-Planning">
+                <a href="/notes/Financial-Planning" style="text-decoration: none;">
+                  <h4>Financial Planning</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Why save?
+                      You want stuff
+                      Stuff is expensive
+                      You&#39;ll get old and won&#39;t have pension (unlike previous generations)
+                      Best time to start saving is the day you start earning
+                      Why invest?
+                      If you leave money in the bank at interest rate lower th...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/ui-design-tricks">
+                <a href="/notes/ui-design-tricks" style="text-decoration: none;">
+                  <h4>Neat UI Design tricks</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      UI Design
+                      ASCII Symbols
+                      You can use some ASCII symbols like the interpunct (•) in your designs instead of using icons. You can find a bunch of these symbols at glyphy.io. These are useful when you want to separate two elements but want to keep them in the...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/CEED-Exam-&-IDC-Interview">
+                <a href="/notes/CEED-Exam-&-IDC-Interview" style="text-decoration: none;">
+                  <h4>CEED Exam & IDC Interview</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      The IDC logo at the main entrance of the building.
+                      I studied Interaction Design at IDC School of Design from 2018-2020, and I have had a number of people reach out to me to ask about the CEED exam and the interview process at IDC. There is not much informa...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Freelancing">
+                <a href="/notes/Freelancing" style="text-decoration: none;">
+                  <h4>Freelancing</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      I worked as a freelance graphic and UI/UX designer for many years before switching to a full-time position at Microsoft. Freelancing can be challenging to get started with—and it&#39;s not for everyone, but the freedom to pick your projects, working hours, ...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/UX-Design-at-Microsoft">
+                <a href="/notes/UX-Design-at-Microsoft" style="text-decoration: none;">
+                  <h4>UX Design at Microsoft</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      I did my Internship at Microsoft at the Hyderbad campus while I was doing my Master&#39;s degree in Interaction Design at IDC School of Design, IIT Bombay. I then returned to Microsoft after finishing my degree, and started my first job as a UX Designer. I ...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Fake-News">
+                <a href="/notes/Fake-News" style="text-decoration: none;">
+                  <h4>Fake News</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Misinformation on WhatsApp, a project by Gyan Lakhwani, M. Des. Student of IDC, IIT Bombay - YouTube
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/drs-reflections">
+                <a href="/notes/drs-reflections" style="text-decoration: none;">
+                  <h4>Reflections on DRS</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      As I look back on my time at IDC I think that I have changed quite a bit in my outlook towards design. As a 22 year old engineering graduate I had discovered an interest in design, had learned the software tools and even found paid projects. I had proven to...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Ginger-Beer">
+                <a href="/notes/Ginger-Beer" style="text-decoration: none;">
+                  <h4>Ginger Beer</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Ingredients
+                      For a batch of 1.2 litres
+                      100gm Sugar
+                      16gm ginger (washed, peeled, coarsely chopped)
+                      1/2 teaspoon yeast
+                      Water
+                      Steps
+                      Use a hand blender to blend the ginger pieces with some water.
+                      Put the sugar and 300ml water in a pan along wit...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/24">
+                <a href="/24" style="text-decoration: none;">
+                  <h4>Turning 24</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Turning 24 (2020)
+                      I didn&#39;t write anything in 2020 because the IIT Bombay campus unexpectedly shut down due to COVID-19, and I took a flight back home the next morning. Here are some pictures from that day though.
+                      A plant on my windowsill
+                      Rishi and N...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/webtype">
+                <a href="/webtype" style="text-decoration: none;">
+                  <h4>Web Typography</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      I taught a hands-on workshop called Basics of Web Typography on 28 Jan 2020, as part of the 2D Visual Studies course for B.Des. students at IDC School of Design.
+                      The workshop used an HTML/CSS blog template that students could use to set up their own GitHub...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/ai">
+                <a href="/ai" style="text-decoration: none;">
+                  <h4>Theory - PS626: AI, Data & Policy</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Why did I take this elective?
+                      The fourth and last semester of the IDC M.Des. program has a research project and a design project, but no lectures. Masters students at IIT, however, can choose to take one of a set of electives. I thought it would be interest...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/nltk">
+                <a href="/nltk" style="text-decoration: none;">
+                  <h4>Lab Notes - PS626: AI, Data & Policy</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Useful stuff in Python
+                      Pick substring from string
+                      a = &quot;dsajdshfdskufadlfdl&quot;
+                      a[2:4] //2nd to 4th char
+                      &#39;ajd&#39;
+                      a = &quot;dsajdshfdskufadlfdl&quot;
+                      a[2:-5] //2nd to 5th last char
+                      &#39;ajdshfdskufa&#39;
+                      Generate random number in range
+                      //Usin...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/intro-to-qrm">
+                <a href="/notes/intro-to-qrm" style="text-decoration: none;">
+                  <h4>Research Methods in HCI - Website</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Live site and Mirror
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/pairings">
+                <a href="/notes/pairings" style="text-decoration: none;">
+                  <h4>Font Pairing Generator</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Find fonts that go well together by trying them out together.
+                      Try it here
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Font-Finder">
+                <a href="/notes/Font-Finder" style="text-decoration: none;">
+                  <h4>Font Finder</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      “well chosen words deserve well-chosen letters.”- robert bringhurst, the elements of typographic style
+                      This tool allows you to browse fonts to using combinations of adjectives instead of the classification terminology used by graphic designers.
+                      Much has b...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/drm-cheatsheet">
+                <a href="/drm-cheatsheet" style="text-decoration: none;">
+                  <h4>Stats for Research Methods</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Link to PDF slides
+                      Fair warning:  Some of these slides refer to material distributed during the course, and may not make sense without them.
+                      Nobody even cracked a smile when I showed this slide, which tells you just how stressed people were about this...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/indiahci19">
+                <a href="/notes/indiahci19" style="text-decoration: none;">
+                  <h4>India HCI 2019</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Sketch notes from India HCI 2019.
+                      Try it here
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/cutie">
+                <a href="/cutie" style="text-decoration: none;">
+                  <h4>Cutie - web animation experiment</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      I was trying to figure out how animation on the web works, and created this to practice.
+                      Try it here
+                      Try it here
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/litrev">
+                <a href="/notes/litrev" style="text-decoration: none;">
+                  <h4>So you want to do a Literature Review</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Google Scholar
+                      The world&#39;s largest search engine brings you the world&#39;s largest academic search engine. It has pretty good coverage, and you can directly copy the citation for a result. Good place to start searching for papers.
+                      Unpaywall
+                      Unpaywall ...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/font-resources">
+                <a href="/notes/font-resources" style="text-decoration: none;">
+                  <h4>Font Resources</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      With an explosion in high quality open source fonts, there are more options available for designers and novices alike, and the aim was to create an interface that used a more ‘natural’ classification of fonts than the default classification of serif, sans-s...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/how-to-circos">
+                <a href="/notes/how-to-circos" style="text-decoration: none;">
+                  <h4>Making chord diagrams with Circos Online</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      What is Circos?
+                      Circos is a free and open source software package for visualizing data in a circular layout i.e. as chord diagrams. It has been featured in many scientific and other publications (including the covers of both Science and Nature), so it&#39;...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/john-samuel-raja">
+                <a href="/notes/john-samuel-raja" style="text-decoration: none;">
+                  <h4>Talk by John Samuel Raja.</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Talk by John Samuel Raja, economist and journalist.
+                      How India Lives
+                      John Samuel Raja&#39;s startup working in the space of making public data available to everyone.
+                      The Problem
+                      Public data exists, but few people use it to make decisions because :
+                      I...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/drm">
+                <a href="/drm" style="text-decoration: none;">
+                  <h4>Design Research Methodologies</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Friday, 2 August 2019
+                      Girish Dalvi
+                      Source Grid
+                      Author
+                      Definition
+                      Notes
+                      Athavankar (1990)
+                      Design is…
+                      First Definition
+                      Balram (1995)
+                      Design is…
+                      Inspired by Ulm
+                      ...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/contributing-to-osm">
+                <a href="/notes/contributing-to-osm" style="text-decoration: none;">
+                  <h4>Contributing to OpenStreetMap</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      What is OSM?
+                      OpenStreetMap is an open source project that aims to create a free, editable map of the world. It&#39;s like Wikipedia, but for maps.
+                      How did we do it?
+                      Most of us followed the instructions to update OSM through the Java based OSM editor JOSM...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/delhi-map">
+                <a href="/notes/delhi-map" style="text-decoration: none;">
+                  <h4>My map of Delhi</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Schematic map of green spaces in New Delhi.
+                      I made this schematic map during a data visualization course at IDC School of Design. A schematic map is not drawn to scale, and omits irrelevant details in favour of simplified elements that convey a key idea. A...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Internship-at-Microsoft">
+                <a href="/notes/Internship-at-Microsoft" style="text-decoration: none;">
+                  <h4>Internship at Microsoft</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      In the summer of 2019, I was part of the Microsoft Foundry program at Microsoft Hyderabad. The Foundry is an internship program designed to allow interns to work in cross-functional teams that mimic the structure of collaboration between design, development...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Numeronyms">
+                <a href="/notes/Numeronyms" style="text-decoration: none;">
+                  <h4>Numeronyms</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      What are numeronyms?
+                      A numeronym is a number-based word, where the number is typically used to abbreviate the word.
+                      One type of numeronym uses numbers that sound similar to the full word. An example is &quot;K9&quot; for &quot;canine&quot;.
+                      Another type ...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/devanagari-font">
+                <a href="/notes/devanagari-font" style="text-decoration: none;">
+                  <h4>Untitled Devanagari Font</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      I took the Advanced Typography elective at IDC in my second semester, and spent two weeks working on a Devanagari typeface. Here is some of my work from the course.
+                      Revolutionary
+                      The monument of love. Also, tea.
+                      Waterfall view of some of the finish...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/23">
+                <a href="/23" style="text-decoration: none;">
+                  <h4>Turning 23</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Turning 23 (2019)
+                      Out of focus sunset at Worli Seaface
+                      Last year and the year before that I wrote a note to myself on my birthday. Here&#39;s some stuff on how it was being 22 and some things I want to do at 23.
+                      Last year&#39;s note was me talking about...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/notes-from-typoday">
+                <a href="/notes/notes-from-typoday" style="text-decoration: none;">
+                  <h4>Typoday 2019</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Sketch notes from Typoday 2019.
+                      Try it here
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/dots">
+                <a href="/notes/dots" style="text-decoration: none;">
+                  <h4>Dots - an interactive installation</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      This was one of the weirder things I&#39;ve done at college.
+                      What is this?
+                      Dots is an an experimental installation I worked on with my friend Rashmi in my first semester at IDC School of Design. We wanted to create a fun installation that could grab the a...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Intro-to-Photography">
+                <a href="/notes/Intro-to-Photography" style="text-decoration: none;">
+                  <h4>Intro to Photography</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Intro to Photography is a 1 week course in the first semester at IDC that teaches students about the history of capturing images, how to use a camera, understand angles, lighting and creating a compositions.
+                      My classmate Prachi (very patiently) acted as ...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/plutonium-sans">
+                <a href="/notes/plutonium-sans" style="text-decoration: none;">
+                  <h4>Plutonium Sans</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      A few months ago, I worked on a script typeface based on my handwriting. I called it Lettuce Party. It was my first foray into type design, and I came out of the experience with a lot of insights into what not to do when you are trying to design a typeface....
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/kea">
+                <a href="/notes/kea" style="text-decoration: none;">
+                  <h4>Kea</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Check out the website at https://kea.ai/
+                      Kea is a Voice AI startup that helps restaurants accept phone orders without needing a human to answer the phone and transcribe the order. Their technology directly integrates with Point-Of-Sales (POS) systems, and ...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/22">
+                <a href="/22" style="text-decoration: none;">
+                  <h4>Turning 22</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Turning 22 (2018)
+                      Bougainvillea
+                      Last year I wrote a note to myself on my 21st birthday and I guess this is a thing now. These are some notes on how it was being 21 and some things I want to do at 22.
+                      This was not an exciting year. It was slow, and while...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/zomato">
+                <a href="/notes/zomato" style="text-decoration: none;">
+                  <h4>Interning at Zomato</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      How did I get here?
+                      I’ve been working as a freelance designer for a while now, and this has been a constant learning experience. In the past three years I’ve done branding work, made print posters and magazines, created illustrations and infographics, desi...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/lettuce-party">
+                <a href="/notes/lettuce-party" style="text-decoration: none;">
+                  <h4>Lettuce Party</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      While interning at Zomato last winter, I worked on some illustrations for a Zomato iMessage sticker pack. I wanted a hand-made look for the stickers, so I was manually doing the lettering using a Wacom graphics tablet. I really liked how it turned out — and...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/21">
+                <a href="/21" style="text-decoration: none;">
+                  <h4>Turning 21</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Turning 21 (2017)
+                      Photo of flowers that Shirin clicked while walking through Jor Bagh.
+                      I&#39;ve been thinking about being 20. It started terribly. On my first day of being 20, I already had a broken heart I thought would never heal. I didn&#39;t know wha...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Brush-Lettering">
+                <a href="/notes/Brush-Lettering" style="text-decoration: none;">
+                  <h4>Brush Lettering</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      About the project
+                      I started this project for Inktober 2016. I&#39;d been learning brush lettering for a while, and I painted a series of pop-culture phrases from things that I love. They&#39;re mostly watercolor on paper, with some digital processing to cl...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/hackindia">
+                <a href="/notes/hackindia" style="text-decoration: none;">
+                  <h4>HackIndia</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      The original website is no longer up, but there is an archive of the submissions at https://hackindia.devpost.com/
+                      About HackIndia
+                      HackIndia was India&#39;s first large scale hackathon for students, organised by students. It brought together India&#39;s m...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/delhi-dribbble">
+                <a href="/notes/delhi-dribbble" style="text-decoration: none;">
+                  <h4>New Delhi Dribbble Meetup</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Check out the shot on Dribbble.
+                      One day as I was on Dribbble, I stumbled upon their meetups section. I realised there hadn&#39;t been one in Delhi, so I decided to organise one.
+                      Meetup attendees at the India Habitat Centre, New Delhi.
+                      We had 14 de...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/Jobsplane">
+                <a href="/notes/Jobsplane" style="text-decoration: none;">
+                  <h4>Jobsplane</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      About Jobsplane
+                      Jobsplane is a job aggregator which helps people across India find the right jobs and internships for them. I worked with the Jobsplane team on an updated brand identity, a redesign of their website, and on the design for their new mobile a...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/ChromaGen">
+                <a href="/ChromaGen" style="text-decoration: none;">
+                  <h4>Color Generator</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      What is it?
+                      ChromaGen is a simple random color generator.
+                      But why?
+                      I made it to learn JavaScript. I suppose you can use it if you want to generate a random color.
+                      Features
+                      random color generation
+                      one-click hex code copying
+                      responsive design
+                      Bui...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="block note-cards">
+              <div class="box-feed" data-url="http://localhost:4000/notes/MarkDown-Test-Page">
+                <a href="/notes/MarkDown-Test-Page" style="text-decoration: none;">
+                  <h4>Heading 1</h4>
+                  <div class="content">
+                    <p style="margin: 0px;">
+                      Some regular text with bold and italics a footnote. 1 My favorite search engine is Duck Duck Go. Quick link https://www.markdownguide.org and quick email ID fake@example.com
+                      Heading 1
+                      Lorem ipsum dolor set amet.
+                      Heading 2
+                      Lorem ipsum dolor set amet.
+                      He...
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div id="copyright">
+              <p id="copyright-notice">Gyan Lakhwani. 2022, powered by <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io">Jekyll Garden</a></p>
+            </div>
+            <script src="/assets/js/modeswitcher.js"></script></div>
+          <!---CASE 2 : Notes & Blog Page--><!--- CASE 3 : Static Page --><!--- CASE 4 :  Blog Listing page --><!--- CASE 5 :  Notes Listing page --></div>
+      </section>
+    </body>
+  </html>
